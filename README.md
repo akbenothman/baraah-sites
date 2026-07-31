@@ -126,8 +126,8 @@ node tools/thumbs.js
 ```
 media/gallery/*.jpg   1280x769 at 2x — Fiverr's recommended gig image ratio
 media/full/*.jpg      each page top to bottom, for portfolio/work-sample slots
-media/gig-promo.mp4               48s edited cut — the one to put on the gig
-media/portfolio-walkthrough.mp4   61s plain scroll-through, no edit
+media/gig-promo.mp4               51s edited cut, 1080p — the one to put on the gig
+media/portfolio-walkthrough.mp4   63s plain scroll-through, 1080p
 ```
 
 `gig-promo.mp4` opens on a title card, shows each site being *used* — the
@@ -144,9 +144,15 @@ node tools/promo.js             # edited gig video
 node tools/video.js             # plain walkthrough
 ```
 
-The font cache exists because Chromium in some sandboxes can't reach
-fonts.googleapis.com; the capture scripts serve the cached copies via request
-interception so screenshots show the real typefaces rather than fallbacks.
+Two environment quirks the capture scripts work around, both worth knowing if
+you ever move this to another machine:
+
+* Chromium here can't reach fonts.googleapis.com, so the scripts serve the
+  cached webfonts via request interception — captures show the real typefaces
+  rather than the fallback stack.
+* The full Chromium build reports a viewport 87px shorter than requested while
+  recording, and Playwright pads the difference with grey. Video capture uses
+  the headless shell binary instead, which records the frame exactly.
 
 ---
 

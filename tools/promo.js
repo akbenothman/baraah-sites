@@ -3,7 +3,7 @@
 //
 //   node tools/promo.js
 //
-// Output: media/gig-promo.mp4 (1280x720, ~35s)
+// Output: media/gig-promo.mp4 (1920x1080, ~48s)
 //
 // Each beat is filmed as its own clip, then the clips are concatenated with
 // hard cuts. The interaction beats are the point — a buyer can see the colour
@@ -13,7 +13,7 @@ const { chromium } = require('playwright');
 const { execFileSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { ROOT, EXE, serveFonts, fileUrl } = require('./capture');
+const { ROOT, VIDEO_EXE, serveFonts, fileUrl } = require('./capture');
 
 const OUT = path.join(ROOT, 'media');
 const TMP = path.join(ROOT, '.promotmp');
@@ -167,14 +167,14 @@ const BEATS = [
   fs.rmSync(TMP, { recursive: true, force: true });
   fs.mkdirSync(TMP, { recursive: true });
 
-  const browser = await chromium.launch({ executablePath: EXE });
+  const browser = await chromium.launch({ executablePath: VIDEO_EXE });
   const clips = [];
 
   for (const beat of BEATS) {
     const dir = path.join(TMP, beat.name);
     const context = await browser.newContext({
-      viewport: { width: 1280, height: 720 },
-      recordVideo: { dir, size: { width: 1280, height: 720 } },
+      viewport: { width: 1920, height: 1080 },
+      recordVideo: { dir, size: { width: 1920, height: 1080 } },
       reducedMotion: 'no-preference',
     });
     const page = await context.newPage();
@@ -192,28 +192,23 @@ const BEATS = [
 
   await browser.close();
 
-  // Normalise every clip to identical parameters, trimming the blank frames the
-  // recorder captures before the first paint, then join with hard cuts.
-  const parts = [];
+  // One encode, not two — re-encoding each clip and then re-encoding the join
+  // stacks generation loss and softens the type. Trim the blank frames the
+  // recorder catches before first paint, then concat in a single pass.
+  const inputs = [];
+  const filters = [];
   clips.forEach((clip, i) => {
-    const mp4 = path.join(TMP, `part-${i}.mp4`);
-    execFileSync(FFMPEG, [
-      '-y', '-i', clip, '-ss', '0.2',
-      '-c:v', 'libx264', '-preset', 'medium', '-crf', '20',
-      '-pix_fmt', 'yuv420p',
-      '-vf', 'scale=1280:720:flags=lanczos,fps=30,setsar=1',
-      '-an', mp4,
-    ], { stdio: 'pipe' });
-    parts.push(mp4);
+    inputs.push('-i', clip);
+    filters.push(`[${i}:v]trim=start=0.2,setpts=PTS-STARTPTS,fps=30,setsar=1[v${i}]`);
   });
-
-  const list = path.join(TMP, 'parts.txt');
-  fs.writeFileSync(list, parts.map((p) => `file '${p}'`).join('\n'));
+  const chain = clips.map((_, i) => `[v${i}]`).join('');
 
   const final = path.join(OUT, 'gig-promo.mp4');
   execFileSync(FFMPEG, [
-    '-y', '-f', 'concat', '-safe', '0', '-i', list,
-    '-c:v', 'libx264', '-preset', 'slow', '-crf', '21',
+    '-y', ...inputs,
+    '-filter_complex', `${filters.join(';')};${chain}concat=n=${clips.length}:v=1:a=0[out]`,
+    '-map', '[out]',
+    '-c:v', 'libx264', '-preset', 'slow', '-crf', '18',
     '-pix_fmt', 'yuv420p', '-movflags', '+faststart',
     '-an', final,
   ], { stdio: 'pipe' });

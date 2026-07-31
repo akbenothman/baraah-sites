@@ -11,6 +11,11 @@ const ROOT = path.resolve(__dirname, '..');
 const CACHE = path.join(ROOT, '.fontcache');
 const EXE = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 
+// The full chrome build reports a viewport 87px shorter than requested when
+// recording, so Playwright letterboxes the video with grey. The headless shell
+// captures the frame exactly, so video capture uses it instead.
+const VIDEO_EXE = '/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell';
+
 const SITES = [
   { key: 'hub', file: 'index.html', name: 'baraah-sites portfolio' },
   { key: 'verano', file: 'sites/verano/index.html', name: 'Verano — coffee roaster' },
@@ -77,4 +82,4 @@ async function primeReveals(page) {
 
 const fileUrl = (rel) => 'file://' + path.join(ROOT, rel);
 
-module.exports = { ROOT, EXE, SITES, serveFonts, settle, primeReveals, fileUrl };
+module.exports = { ROOT, EXE, VIDEO_EXE, SITES, serveFonts, settle, primeReveals, fileUrl };

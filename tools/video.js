@@ -3,13 +3,13 @@
 //
 //   node tools/video.js
 //
-// Output: media/portfolio-walkthrough.mp4 (1280x720, ~60s, under Fiverr's
+// Output: media/portfolio-walkthrough.mp4 (1920x1080, ~60s, under Fiverr's
 // 75-second limit). Run tools/fetch_fonts.py first for real typography.
 const { chromium } = require('playwright');
 const { execFileSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { ROOT, EXE, SITES, serveFonts, fileUrl } = require('./capture');
+const { ROOT, VIDEO_EXE, SITES, serveFonts, fileUrl } = require('./capture');
 
 const OUT = path.join(ROOT, 'media');
 const TMP = path.join(ROOT, '.videotmp');
@@ -41,10 +41,10 @@ async function glide(page, ms) {
   fs.mkdirSync(OUT, { recursive: true });
   fs.rmSync(TMP, { recursive: true, force: true });
 
-  const browser = await chromium.launch({ executablePath: EXE });
+  const browser = await chromium.launch({ executablePath: VIDEO_EXE });
   const context = await browser.newContext({
-    viewport: { width: 1280, height: 720 },
-    recordVideo: { dir: TMP, size: { width: 1280, height: 720 } },
+    viewport: { width: 1920, height: 1080 },
+    recordVideo: { dir: TMP, size: { width: 1920, height: 1080 } },
   });
 
   // one page for the whole run, so navigations land in a single video file
@@ -72,9 +72,9 @@ async function glide(page, ms) {
     '-y', '-i', path.join(TMP, webm),
     // the recorder catches a few blank frames before the first paint
     '-ss', '0.17',
-    '-c:v', 'libx264', '-preset', 'slow', '-crf', '21',
+    '-c:v', 'libx264', '-preset', 'slow', '-crf', '18',
     '-pix_fmt', 'yuv420p',        // required for QuickTime and most players
-    '-vf', 'scale=1280:720:flags=lanczos,fps=30',
+    '-vf', 'fps=30',
     '-movflags', '+faststart',    // lets it start playing before fully loaded
     '-an', mp4,
   ], { stdio: 'pipe' });
