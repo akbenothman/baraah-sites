@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Halo — Skin, simplified</title>
+<meta name="description" content="Four products, one ritual. Barrier-first skincare made with short ingredient lists and no theatre.">
+<meta name="theme-color" content="#EFEAE1">
+<meta property="og:title" content="Halo — Skin, simplified">
+<meta property="og:description" content="Four products, one ritual. Barrier-first skincare, nothing extra.">
+<meta property="og:image" content="img/hero.svg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='none' stroke='%23231F1A' stroke-width='3'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav__in">
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="drawer" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <nav class="nav__links nav__links--l" aria-label="Primary">
+      <a href="#shop">Shop</a>
+      <a href="#ritual">The ritual</a>
+    </nav>
+    <a class="brand" href="#top">halo</a>
+    <div class="nav__right">
+      <nav class="nav__links" aria-label="Secondary">
+        <a href="#inside">Ingredients</a>
+        <a href="#reviews">Reviews</a>
+      </nav>
+      <button class="bag" id="bagBtn">Bag <span id="bagN">0</span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" hidden>
+  <a href="#shop">Shop</a>
+  <a href="#ritual">The ritual</a>
+  <a href="#inside">Ingredients</a>
+  <a href="#reviews">Reviews</a>
+</div>
+
+<main id="main">
+
+<!-- ── hero ─────────────────────────────────────────────────────── -->
+<section class="hero" id="top">
+  <div class="hero__copy">
+    <h1 class="display rise" style="--d:.05s">Skin,<br><em>simplified.</em></h1>
+    <p class="lede rise" style="--d:.16s">
+      Four products. Short ingredient lists. Nothing that needs a diagram.
+    </p>
+    <a class="btn rise" style="--d:.24s" href="#shop">Shop the ritual</a>
+  </div>
+  <figure class="hero__shot rise" style="--d:.12s">
+    <img src="img/hero.svg" alt="The Halo range" fetchpriority="high">
+  </figure>
+  <ul class="hero__strip rise" style="--d:.32s">
+    <li>Fragrance free</li>
+    <li>Dermatologist tested</li>
+    <li>Refillable</li>
+    <li>Never on animals</li>
+  </ul>
+</section>
+
+<!-- ── product ──────────────────────────────────────────────────── -->
+<section class="pdp" id="shop">
+  <figure class="pdp__media reveal">
+    <img id="shadeImg" src="img/shade-1.svg" alt="Barrier Serum in Bare">
+  </figure>
+
+  <div class="pdp__body reveal">
+    <p class="eyebrow">Best seller</p>
+    <h2 class="h2">Barrier Serum</h2>
+    <p class="pdp__price">$38 <span>· 30ml</span></p>
+    <p class="pdp__copy">
+      A weightless squalane and ceramide serum that stops water leaving your
+      skin. Use it morning and night, under everything else, for as long as
+      you like. It does one job properly.
+    </p>
+
+    <div class="shades">
+      <p class="shades__label">Finish: <strong id="shadeName">Bare</strong></p>
+      <div class="shades__row" id="shades">
+        <button data-shade="1" data-name="Bare" style="--c:#E4D6C2" aria-label="Bare"></button>
+        <button data-shade="2" data-name="Glow" style="--c:#D7B98F" aria-label="Glow"></button>
+        <button data-shade="3" data-name="Veil" style="--c:#B79B77" aria-label="Veil"></button>
+      </div>
+    </div>
+
+    <div class="pdp__buy">
+      <div class="qty" role="group" aria-label="Quantity">
+        <button id="minus" aria-label="Decrease">−</button>
+        <span id="qty">1</span>
+        <button id="plus" aria-label="Increase">+</button>
+      </div>
+      <button class="btn btn--wide" id="addBtn">Add to bag — $38</button>
+    </div>
+
+    <ul class="pdp__meta">
+      <li><strong>Texture</strong> Light, non-greasy, absorbs in seconds</li>
+      <li><strong>Skin</strong> All types, including reactive</li>
+      <li><strong>Ships</strong> Free over $50, arrives in 2–4 days</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── quote band ───────────────────────────────────────────────── -->
+<section class="band reveal">
+  <p>“The shortest ingredient list I've ever been able to recommend without a caveat.”</p>
+  <cite>Dr. Neve Arden, consultant dermatologist</cite>
+</section>
+
+<!-- ── ritual ───────────────────────────────────────────────────── -->
+<section class="ritual" id="ritual">
+  <header class="sec-head reveal">
+    <p class="eyebrow">The ritual</p>
+    <h2 class="h2">Three minutes,<br>twice a day.</h2>
+  </header>
+
+  <div class="ritual__grid">
+    <article class="step reveal">
+      <figure><img src="img/texture.svg" alt="Cleansing balm texture" loading="lazy"></figure>
+      <p class="step__n">01 — Cleanse</p>
+      <h3>Milk Cleanser</h3>
+      <p>Melts everything off without stripping. No squeaky feeling, ever.</p>
+      <span class="step__price">$26</span>
+    </article>
+    <article class="step reveal" style="--d:.08s">
+      <figure><img src="img/product.svg" alt="Barrier serum bottle" loading="lazy"></figure>
+      <p class="step__n">02 — Treat</p>
+      <h3>Barrier Serum</h3>
+      <p>Squalane, ceramides, panthenol. The part that does the work.</p>
+      <span class="step__price">$38</span>
+    </article>
+    <article class="step reveal" style="--d:.16s">
+      <figure><img src="img/ritual.svg" alt="Daily cream jar" loading="lazy"></figure>
+      <p class="step__n">03 — Seal</p>
+      <h3>Everyday Cream</h3>
+      <p>A quiet moisturiser that sits under makeup without pilling.</p>
+      <span class="step__price">$32</span>
+    </article>
+  </div>
+
+  <div class="bundle reveal">
+    <div>
+      <h3>The whole ritual</h3>
+      <p>All three, in the refillable set. Save $16.</p>
+    </div>
+    <div class="bundle__buy">
+      <span class="bundle__price"><s>$96</s> $80</span>
+      <button class="btn" data-add>Add the set</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── ingredients ──────────────────────────────────────────────── -->
+<section class="inside" id="inside">
+  <div class="inside__copy reveal">
+    <p class="eyebrow">What's inside</p>
+    <h2 class="h2">Nine ingredients.<br>That's the list.</h2>
+    <p>
+      We publish the full formula, the percentage of every active, and where
+      each one is sourced. If something is in there for texture rather than
+      results, we say so.
+    </p>
+    <a class="link" href="#inside">Read the full formula <span aria-hidden="true">→</span></a>
+  </div>
+  <ul class="inside__list reveal">
+    <li><span>Squalane</span><em>12%</em></li>
+    <li><span>Ceramide NP</span><em>2%</em></li>
+    <li><span>Panthenol</span><em>3%</em></li>
+    <li><span>Glycerin</span><em>5%</em></li>
+    <li><span>Niacinamide</span><em>4%</em></li>
+    <li><span>Allantoin</span><em>0.5%</em></li>
+    <li><span>Sodium hyaluronate</span><em>1%</em></li>
+    <li><span>Tocopherol</span><em>0.4%</em></li>
+    <li><span>Water</span><em>to 100%</em></li>
+  </ul>
+</section>
+
+<!-- ── numbers ──────────────────────────────────────────────────── -->
+<section class="numbers">
+  <div class="reveal"><strong>94%</strong><span>said skin felt calmer in 14 days</span></div>
+  <div class="reveal" style="--d:.08s"><strong>2×</strong><span>barrier recovery vs. no serum</span></div>
+  <div class="reveal" style="--d:.16s"><strong>0</strong><span>fragrance, dyes or essential oils</span></div>
+</section>
+
+<!-- ── reviews ──────────────────────────────────────────────────── -->
+<section class="reviews" id="reviews">
+  <header class="sec-head reveal">
+    <h2 class="h2">4.8 from 2,140 people</h2>
+    <p class="sec-note">Verified purchases only.</p>
+  </header>
+  <div class="reviews__grid">
+    <blockquote class="reveal">
+      <div class="stars" aria-label="5 out of 5">★★★★★</div>
+      <p>I have rosacea and this is the first serum in a decade that hasn't set it off.</p>
+      <cite>Priya S.</cite>
+    </blockquote>
+    <blockquote class="reveal" style="--d:.06s">
+      <div class="stars" aria-label="5 out of 5">★★★★★</div>
+      <p>Replaced four products with one. My bathroom shelf thanks you.</p>
+      <cite>Tom R.</cite>
+    </blockquote>
+    <blockquote class="reveal" style="--d:.12s">
+      <div class="stars" aria-label="4 out of 5">★★★★☆</div>
+      <p>Genuinely lovely texture. I only wish the refill came in a bigger size.</p>
+      <cite>Alix M.</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ── signup ───────────────────────────────────────────────────── -->
+<section class="signup reveal">
+  <h2 class="h2">Get 10% off<br>your first order.</h2>
+  <form class="signup__form" id="signup" novalidate>
+    <label class="sr" for="email">Email address</label>
+    <input id="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+    <button type="submit" aria-label="Subscribe">→</button>
+  </form>
+  <p class="signup__msg" id="signupMsg" role="status"></p>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <a class="brand brand--lg" href="#top">halo</a>
+    <nav class="foot__nav" aria-label="Footer">
+      <div><h4>Shop</h4><a href="#shop">Barrier Serum</a><a href="#ritual">Milk Cleanser</a><a href="#ritual">Everyday Cream</a><a href="#ritual">The set</a></div>
+      <div><h4>Learn</h4><a href="#inside">Full formulas</a><a href="#ritual">How to layer</a><a href="#reviews">Reviews</a></div>
+      <div><h4>Help</h4><a href="#top">Shipping</a><a href="#top">Returns</a><a href="#top">Contact</a></div>
+    </nav>
+  </div>
+  <div class="foot__bar">
+    <p>© 2026 Halo Skin</p>
+    <p>Demo site — design &amp; build by <a href="../../index.html">Studio</a></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

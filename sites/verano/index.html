@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verano — Speciality Coffee Roasters</title>
+<meta name="description" content="Small-batch coffee roasted in Portland. A neighbourhood café, a seasonal menu, and beans shipped fresh every Thursday.">
+<meta name="theme-color" content="#F3EBDD">
+<meta property="og:title" content="Verano — Speciality Coffee Roasters">
+<meta property="og:description" content="Small-batch coffee roasted in Portland. Slow mornings, done properly.">
+<meta property="og:image" content="img/hero.svg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23C4643C'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ── announcement ─────────────────────────────────────────────── -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span>Free shipping over $45</span><span>·</span>
+    <span>Roasted every Tuesday</span><span>·</span>
+    <span>New: Summer Ferment</span><span>·</span>
+    <span>Free shipping over $45</span><span>·</span>
+    <span>Roasted every Tuesday</span><span>·</span>
+    <span>New: Summer Ferment</span><span>·</span>
+  </div>
+</div>
+
+<!-- ── nav ──────────────────────────────────────────────────────── -->
+<header class="nav" id="nav">
+  <div class="nav__in">
+    <a class="brand" href="#top" aria-label="Verano home">
+      <svg viewBox="0 0 26 26" width="26" height="26" aria-hidden="true">
+        <circle cx="13" cy="13" r="12" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M13 4.5c4 3.6 4 13.4 0 17-4-3.6-4-13.4 0-17z" fill="currentColor" opacity=".85"/>
+      </svg>
+      <span>Verano</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#shop">Shop</a>
+      <a href="#menu">Café</a>
+      <a href="#story">Our roast</a>
+      <a href="#visit">Visit</a>
+    </nav>
+
+    <div class="nav__end">
+      <button class="cart" id="cart" aria-label="Open bag">
+        Bag <span class="cart__n" id="cartN">0</span>
+      </button>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="drawer" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" hidden>
+  <a href="#shop">Shop</a>
+  <a href="#menu">Café</a>
+  <a href="#story">Our roast</a>
+  <a href="#visit">Visit</a>
+</div>
+
+<main id="main">
+
+<!-- ── hero ─────────────────────────────────────────────────────── -->
+<section class="hero" id="top">
+  <img class="hero__bg" src="img/hero.svg" alt="" aria-hidden="true">
+  <div class="hero__in">
+    <p class="eyebrow rise" style="--d:.05s">Portland, Oregon — est. 2016</p>
+    <h1 class="display rise" style="--d:.12s">
+      Slow mornings,<br><em>done properly.</em>
+    </h1>
+    <p class="lede rise" style="--d:.2s">
+      Small-batch beans roasted a few blocks from where you drink them.
+      No rush, no shortcuts, no burnt bitterness.
+    </p>
+    <div class="hero__cta rise" style="--d:.28s">
+      <a class="btn" href="#shop">Shop the roast</a>
+      <a class="btn btn--ghost" href="#visit">Find the café</a>
+    </div>
+  </div>
+  <div class="hero__scroll" aria-hidden="true"><span></span>scroll</div>
+</section>
+
+<!-- ── marquee ──────────────────────────────────────────────────── -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Single origin</span><i>✷</i><span>Roasted in-house</span><i>✷</i>
+    <span>Seasonal lots</span><i>✷</i><span>Direct trade</span><i>✷</i>
+    <span>Single origin</span><i>✷</i><span>Roasted in-house</span><i>✷</i>
+    <span>Seasonal lots</span><i>✷</i><span>Direct trade</span><i>✷</i>
+  </div>
+</div>
+
+<!-- ── intro ────────────────────────────────────────────────────── -->
+<section class="intro reveal">
+  <p class="intro__text">
+    We started with one drum roaster and a stubborn idea: that a cup of
+    coffee should taste like the place it came from. Ten harvests later
+    we still cup every lot by hand, and we still get excited about it.
+  </p>
+  <div class="intro__meta">
+    <div><strong>9</strong><span>farm partners</span></div>
+    <div><strong>48h</strong><span>bean to bag</span></div>
+    <div><strong>2</strong><span>neighbourhood cafés</span></div>
+  </div>
+</section>
+
+<!-- ── shop ─────────────────────────────────────────────────────── -->
+<section class="shop" id="shop">
+  <header class="sec-head reveal">
+    <h2 class="h2">This week's roast</h2>
+    <a class="link" href="#shop">All coffee <span aria-hidden="true">→</span></a>
+  </header>
+
+  <div class="grid-3">
+    <article class="card reveal" style="--d:0s">
+      <div class="card__media"><img src="img/bag-1.svg" alt="Cascara Sunday whole bean coffee" loading="lazy"></div>
+      <div class="card__body">
+        <h3>Cascara Sunday</h3>
+        <p class="notes">Peach · brown sugar · jasmine</p>
+        <div class="card__foot">
+          <span class="price">$21</span>
+          <button class="add" data-add>Add to bag</button>
+        </div>
+      </div>
+      <span class="tag">Light roast</span>
+    </article>
+
+    <article class="card reveal" style="--d:.08s">
+      <div class="card__media"><img src="img/bag-2.svg" alt="Long Shadow whole bean coffee" loading="lazy"></div>
+      <div class="card__body">
+        <h3>Long Shadow</h3>
+        <p class="notes">Cocoa · fig · toasted almond</p>
+        <div class="card__foot">
+          <span class="price">$19</span>
+          <button class="add" data-add>Add to bag</button>
+        </div>
+      </div>
+      <span class="tag">Medium</span>
+    </article>
+
+    <article class="card reveal" style="--d:.16s">
+      <div class="card__media"><img src="img/bag-3.svg" alt="Summer Ferment whole bean coffee" loading="lazy"></div>
+      <div class="card__body">
+        <h3>Summer Ferment</h3>
+        <p class="notes">Raspberry · lime peel · honey</p>
+        <div class="card__foot">
+          <span class="price">$26</span>
+          <button class="add" data-add>Add to bag</button>
+        </div>
+      </div>
+      <span class="tag tag--new">New</span>
+    </article>
+  </div>
+</section>
+
+<!-- ── story ────────────────────────────────────────────────────── -->
+<section class="split" id="story">
+  <div class="split__media reveal">
+    <img src="img/story.svg" alt="Green coffee resting before roast" loading="lazy">
+  </div>
+  <div class="split__body reveal">
+    <p class="eyebrow">The roast</p>
+    <h2 class="h2">We roast light enough<br>to taste the farm.</h2>
+    <p>
+      Every lot lands green and gets cupped three times before it earns a
+      profile. We roast in 12kg batches on a 1974 Probat, log every curve,
+      and rest the beans four days before they leave the building.
+    </p>
+    <ul class="ticks">
+      <li>Cupped and scored in-house, every single lot</li>
+      <li>Prices paid 40% above the commodity market</li>
+      <li>Bagged the day it ships — never warehoused</li>
+    </ul>
+    <a class="link" href="#visit">Book a roastery tour <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<!-- ── menu ─────────────────────────────────────────────────────── -->
+<section class="menu" id="menu">
+  <header class="sec-head reveal">
+    <h2 class="h2">At the café</h2>
+    <p class="sec-note">Served 7am–3pm, daily</p>
+  </header>
+
+  <div class="menu__cols">
+    <div class="menu__col reveal">
+      <h3 class="menu__cat">Espresso</h3>
+      <dl>
+        <div><dt>Espresso</dt><dd class="dots"></dd><dd>3.25</dd></div>
+        <div><dt>Cortado</dt><dd class="dots"></dd><dd>4.00</dd></div>
+        <div><dt>Flat white</dt><dd class="dots"></dd><dd>4.75</dd></div>
+        <div><dt>Honey oat latte</dt><dd class="dots"></dd><dd>5.50</dd></div>
+      </dl>
+    </div>
+    <div class="menu__col reveal" style="--d:.08s">
+      <h3 class="menu__cat">Filter</h3>
+      <dl>
+        <div><dt>Batch brew</dt><dd class="dots"></dd><dd>3.50</dd></div>
+        <div><dt>Pour over, single origin</dt><dd class="dots"></dd><dd>6.00</dd></div>
+        <div><dt>Cold brew</dt><dd class="dots"></dd><dd>5.00</dd></div>
+        <div><dt>Cascara tonic</dt><dd class="dots"></dd><dd>6.50</dd></div>
+      </dl>
+    </div>
+    <div class="menu__col reveal" style="--d:.16s">
+      <h3 class="menu__cat">Kitchen</h3>
+      <dl>
+        <div><dt>Cardamom bun</dt><dd class="dots"></dd><dd>4.50</dd></div>
+        <div><dt>Sourdough, cultured butter</dt><dd class="dots"></dd><dd>6.00</dd></div>
+        <div><dt>Seasonal galette</dt><dd class="dots"></dd><dd>7.50</dd></div>
+        <div><dt>Soft egg sandwich</dt><dd class="dots"></dd><dd>9.00</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ── gallery ──────────────────────────────────────────────────── -->
+<section class="gallery">
+  <figure class="gallery__item gallery__item--tall reveal">
+    <img src="img/beans.svg" alt="Cup of filter coffee on the bar" loading="lazy">
+  </figure>
+  <div class="gallery__stack">
+    <figure class="gallery__item reveal" style="--d:.08s">
+      <img src="img/room.svg" alt="The café room in morning light" loading="lazy">
+    </figure>
+    <figure class="gallery__item reveal" style="--d:.16s">
+      <img src="img/pour.svg" alt="A pour over in progress" loading="lazy">
+    </figure>
+  </div>
+  <figure class="gallery__item gallery__item--tall reveal" style="--d:.24s">
+    <img src="img/story.svg" alt="Green coffee resting in the roastery" loading="lazy">
+  </figure>
+</section>
+
+<!-- ── quotes ───────────────────────────────────────────────────── -->
+<section class="quotes reveal">
+  <div class="quotes__stage" id="quotes">
+    <blockquote class="quote is-on">
+      <p>“The best cup in the city, and it isn't close.”</p>
+      <cite>Portland Monthly</cite>
+    </blockquote>
+    <blockquote class="quote">
+      <p>“I've been coming every Saturday for four years. They still remember my order.”</p>
+      <cite>Renata M.</cite>
+    </blockquote>
+    <blockquote class="quote">
+      <p>“Summer Ferment tastes like a raspberry ran through a coffee shop.”</p>
+      <cite>Beans &amp; Beyond</cite>
+    </blockquote>
+  </div>
+  <div class="quotes__dots" id="quoteDots" role="tablist" aria-label="Testimonials"></div>
+</section>
+
+<!-- ── visit ────────────────────────────────────────────────────── -->
+<section class="visit" id="visit">
+  <div class="visit__card reveal">
+    <p class="eyebrow">Come sit down</p>
+    <h2 class="h2">Two rooms,<br>same coffee.</h2>
+    <div class="visit__rows">
+      <div>
+        <h3>Alberta St.</h3>
+        <p>1841 NE Alberta St<br>Portland, OR 97211</p>
+        <p class="hours">Mon–Fri 7–15 · Sat–Sun 8–16</p>
+      </div>
+      <div>
+        <h3>The Roastery</h3>
+        <p>420 SE Water Ave<br>Portland, OR 97214</p>
+        <p class="hours">Wed–Sun 8–14 · tours Sat 10am</p>
+      </div>
+    </div>
+    <a class="btn" href="#visit">Get directions</a>
+  </div>
+  <div class="visit__map reveal" aria-hidden="true">
+    <svg viewBox="0 0 400 400" width="100%" height="100%" role="presentation">
+      <rect width="400" height="400" fill="#E7DBC6"/>
+      <g stroke="#CBB693" stroke-width="7" fill="none">
+        <path d="M-10 90 H410 M-10 250 H410 M120 -10 V410 M290 -10 V410"/>
+      </g>
+      <g stroke="#D6C4A4" stroke-width="3" fill="none">
+        <path d="M-10 170 H410 M-10 330 H410 M50 -10 V410 M205 -10 V410 M360 -10 V410"/>
+      </g>
+      <path d="M-10 300 C 120 260 190 340 410 280" stroke="#A9BFA0" stroke-width="22" fill="none"/>
+      <circle cx="205" cy="170" r="13" fill="#C4643C"/>
+      <circle cx="205" cy="170" r="26" fill="none" stroke="#C4643C" stroke-width="2" opacity=".5"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ── newsletter ───────────────────────────────────────────────── -->
+<section class="signup reveal">
+  <h2 class="h2">Thursday letters.</h2>
+  <p>What we roasted, what's on bar, and the occasional recipe. One email a week.</p>
+  <form class="signup__form" id="signup" novalidate>
+    <label class="sr" for="email">Email address</label>
+    <input id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <p class="signup__msg" id="signupMsg" role="status"></p>
+</section>
+
+</main>
+
+<!-- ── footer ───────────────────────────────────────────────────── -->
+<footer class="foot">
+  <div class="foot__top">
+    <a class="brand brand--lg" href="#top">
+      <svg viewBox="0 0 26 26" width="34" height="34" aria-hidden="true">
+        <circle cx="13" cy="13" r="12" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M13 4.5c4 3.6 4 13.4 0 17-4-3.6-4-13.4 0-17z" fill="currentColor" opacity=".85"/>
+      </svg>
+      <span>Verano</span>
+    </a>
+    <nav class="foot__nav" aria-label="Footer">
+      <div>
+        <h4>Shop</h4>
+        <a href="#shop">Whole bean</a><a href="#shop">Subscriptions</a><a href="#shop">Gift cards</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <a href="#visit">Alberta St.</a><a href="#visit">The Roastery</a><a href="#menu">Café menu</a>
+      </div>
+      <div>
+        <h4>More</h4>
+        <a href="#story">Our roast</a><a href="#story">Wholesale</a><a href="#top">Careers</a>
+      </div>
+    </nav>
+  </div>
+  <div class="foot__bar">
+    <p>© 2026 Verano Coffee Roasters</p>
+    <p class="foot__demo">Demo site — design &amp; build by <a href="../../index.html">Studio</a></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
