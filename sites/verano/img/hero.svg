@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1150" width="1800" height="1150" preserveAspectRatio="xMidYMid slice" role="img">
+  <defs>
+    <filter id="n4316" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" seed="4316" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1800" height="1150" fill="#EFE5D5"/>
+
+  <rect width="1800" height="830" fill="#EFE5D5"/>
+  <!-- window -->
+  <path d="M120 720 V330 a200 200 0 0 1 400 0 V720 Z" fill="#FBF7F0"/>
+  <path d="M120 720 V330 a200 200 0 0 1 400 0 V720" fill="none" stroke="#6B4A32" stroke-width="9"/>
+  <path d="M320 130 V720 M120 470 H520" stroke="#6B4A32" stroke-width="7"/>
+  <path d="M150 700 L470 380 M250 710 L510 450" stroke="#E4D2B2" stroke-width="26" opacity=".7"/>
+  <!-- shelf -->
+  <rect x="980" y="392" width="740" height="16" fill="#6B4A32"/>
+  <g>
+    <path d="M1010 392 V257.08 q0 -7.08 7.08 -7.08 H1120.92 q7.08 0 7.08 7.08 V392 Z" fill="#C4643C"/>
+    <path d="M1006 240 h125 v13 h-125 z" fill="#6B4A32"/>
+    <path d="M1069 392 V250" stroke="#3E2A1C" stroke-width="2" opacity=".12"/></g>
+  <g>
+    <path d="M1160 392 V243.08 q0 -7.08 7.08 -7.08 H1270.92 q7.08 0 7.08 7.08 V392 Z" fill="#D9BE96"/>
+    <path d="M1156 225 h125 v14 h-125 z" fill="#6B4A32"/>
+    <path d="M1219 392 V236" stroke="#3E2A1C" stroke-width="2" opacity=".12"/></g>
+  <g>
+    <path d="M1310 392 V265.08 q0 -7.08 7.08 -7.08 H1420.92 q7.08 0 7.08 7.08 V392 Z" fill="#6B4A32"/>
+    <path d="M1306 249 h125 v12 h-125 z" fill="#3E2A1C"/>
+    <path d="M1369 392 V258" stroke="#3E2A1C" stroke-width="2" opacity=".12"/></g>
+  <g fill="#E4D2B2">
+    <rect x="1470" y="286" width="96" height="106" rx="10"/>
+    <rect x="1462" y="270" width="112" height="22" rx="8" fill="#6B4A32"/>
+    <rect x="1600" y="300" width="90" height="92" rx="10"/>
+    <rect x="1592" y="284" width="106" height="22" rx="8" fill="#6B4A32"/>
+  </g>
+  
+  <g>
+    <path d="M700 0 V210" stroke="#6B4A32" stroke-width="3.4"/>
+    <path d="M614.9 279.0 L676 210 H724 L785.1 279.0 Z" fill="#C4643C"/>
+    <ellipse cx="700" cy="279.0" rx="85.1" ry="10" fill="#3E2A1C" opacity=".3"/>
+    <ellipse cx="700" cy="348" rx="128" ry="53" fill="#E4D2B2" opacity=".5"/>
+  </g>
+  
+  <g>
+    <path d="M900 0 V150" stroke="#6B4A32" stroke-width="3.4"/>
+    <path d="M814.9 219.0 L876 150 H924 L985.1 219.0 Z" fill="#C4643C"/>
+    <ellipse cx="900" cy="219.0" rx="85.1" ry="10" fill="#3E2A1C" opacity=".3"/>
+    <ellipse cx="900" cy="288" rx="128" ry="53" fill="#E4D2B2" opacity=".5"/>
+  </g>
+  
+  <g>
+    <path d="M1100 0 V250" stroke="#6B4A32" stroke-width="3.4"/>
+    <path d="M1014.9 319.0 L1076 250 H1124 L1185.1 319.0 Z" fill="#C4643C"/>
+    <ellipse cx="1100" cy="319.0" rx="85.1" ry="10" fill="#3E2A1C" opacity=".3"/>
+    <ellipse cx="1100" cy="388" rx="128" ry="53" fill="#E4D2B2" opacity=".5"/>
+  </g>
+  <!-- counter -->
+  <rect y="830" width="1800" height="320" fill="#9E7448"/>
+  <rect y="830" width="1800" height="22" fill="#D9BE96"/>
+  <rect y="980" width="1800" height="10" fill="#3E2A1C" opacity=".18"/>
+  
+  <g>
+    <rect x="1080" y="530" width="420" height="300" rx="15" fill="#A64F2C"/>
+    <rect x="1065" y="494" width="449" height="42" rx="8" fill="#6B4A32"/>
+    <rect x="1114" y="572" width="353" height="84" rx="8" fill="#D9BE96" opacity=".85"/>
+    <circle cx="1164" cy="614" r="21" fill="#C4643C"/>
+    <circle cx="1416" cy="614" r="21" fill="#C4643C"/>
+    <!-- group heads + portafilters -->
+    <g fill="#3E2A1C">
+      <rect x="1147" y="728.0" width="84" height="35" rx="6"/>
+      <rect x="1349" y="728.0" width="84" height="35" rx="6"/>
+      <rect x="1164" y="763" width="50" height="16"/>
+      <rect x="1366" y="763" width="50" height="16"/>
+      <rect x="1055" y="759" width="101" height="9" rx="6"/>
+    </g>
+    <!-- steam wand -->
+    <path d="M1479 680 v90" stroke="#3E2A1C" stroke-width="9.2" stroke-linecap="round"/>
+    <!-- cups catching the shots -->
+    <g fill="#FBF7F0">
+      <path d="M1160 793 h59 v27 q0 10 -29 10 q-29 0 -29 -10 z"/>
+      <path d="M1361 793 h59 v27 q0 10 -29 10 q-29 0 -29 -10 z"/>
+    </g>
+  </g>
+  
+  <g>
+    <path d="M900 830 v-126 h140 v126 z" fill="#6B4A32"/>
+    <path d="M920 704 v-60 h101 v60 z" fill="#3E2A1C"/>
+    <path d="M928 644 l14 -114 h56 l14 114 z" fill="#D9BE96"/>
+    <rect x="942" y="740" width="56" height="48" rx="4" fill="#FBF7F0" opacity=".8"/>
+  </g>
+  <g><path d="M674 768 h92 v34 a46 46 0 0 1 -92 0 z" fill="#FBF7F0"/><path d="M766 782 a22 22 0 0 1 0 44" fill="none" stroke="#FBF7F0" stroke-width="10"/><ellipse cx="720" cy="830" rx="70" ry="12" fill="#E4D2B2"/></g>
+  <g><path d="M561 777 h78 v29 a39 39 0 0 1 -78 0 z" fill="#FBF7F0"/><path d="M639 789 a19 19 0 0 1 0 37" fill="none" stroke="#FBF7F0" stroke-width="8"/><ellipse cx="600" cy="830" rx="60" ry="10" fill="#E4D2B2"/></g>
+  <g fill="none" stroke="#6B4A32" stroke-width="8" stroke-linecap="round" opacity=".45">
+    <path d="M1249 490 c-19 -36 19 -55 0 -94"/>
+    <path d="M1290 500 c-19 -38 19 -60 0 -103"/>
+    <path d="M1331 490 c-19 -36 19 -55 0 -94"/>
+  </g>
+  
+  <g transform="translate(1660 830) scale(1.0)">
+    <path d="M-60 0 h120 l-14 -104 h-92 z" fill="#A64F2C"/>
+    <path d="M-66 -104 h132 v22 h-132 z" fill="#C4643C"/>
+    <g fill="none" stroke="#6E7F60" stroke-width="7" stroke-linecap="round">
+      <path d="M0 -110 V-250"/><path d="M0 -170 C-40 -190 -66 -232 -70 -272"/>
+      <path d="M0 -196 C40 -216 68 -256 72 -296"/>
+    </g>
+    <g fill="#8A9A7B">
+      <ellipse cx="-74" cy="-286" rx="42" ry="26" transform="rotate(-32 -74 -286)"/>
+      <ellipse cx="76" cy="-310" rx="44" ry="27" transform="rotate(28 76 -310)"/>
+      <ellipse cx="0" cy="-282" rx="38" ry="52"/>
+    </g>
+  </g>
+  <g><g transform="rotate(18 300 900)">
+    <ellipse cx="300" cy="900" rx="30" ry="20.4" fill="#3E2A1C"/>
+    <path d="M276 900 q24 -15 48 0" fill="none" stroke="#EFE5D5" stroke-width="3.6" opacity=".65"/>
+  </g><g transform="rotate(-24 390 930)">
+    <ellipse cx="390" cy="930" rx="26" ry="17.7" fill="#3E2A1C"/>
+    <path d="M369 930 q21 -13 42 0" fill="none" stroke="#EFE5D5" stroke-width="3.1" opacity=".65"/>
+  </g><g transform="rotate(42 470 890)">
+    <ellipse cx="470" cy="890" rx="24" ry="16.3" fill="#3E2A1C"/>
+    <path d="M451 890 q19 -12 38 0" fill="none" stroke="#EFE5D5" stroke-width="2.9" opacity=".65"/>
+  </g></g>
+  <rect width="1800" height="1150" filter="url(#n4316)" opacity="0.22" style="mix-blend-mode:overlay"/>
+</svg>

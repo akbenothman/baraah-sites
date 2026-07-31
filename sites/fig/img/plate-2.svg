@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" preserveAspectRatio="xMidYMid slice" role="img">
+  <defs>
+    <filter id="n2572" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" seed="2572" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1000" height="1000" fill="#14100E"/>
+
+  <circle cx="500" cy="500" r="400" fill="#F2EAD9"/><circle cx="500" cy="500" r="336" fill="#E7DCC6"/><circle cx="500" cy="500" r="336" fill="none" stroke="#8A6A34" stroke-width="3" opacity=".35"/>
+  
+    <g transform="rotate(-30 500 500)">
+      <path d="M404 620 L500 340 L596 620 Z" fill="#4E5A38"/>
+      <path d="M440 540 L560 540 M460 470 L540 470"
+            stroke="#2E1F19" stroke-width="9" stroke-linecap="round" opacity=".75"/>
+    </g>
+    <g transform="rotate(6 500 500)">
+      <path d="M404 620 L500 340 L596 620 Z" fill="#4E5A38"/>
+      <path d="M440 540 L560 540 M460 470 L540 470"
+            stroke="#2E1F19" stroke-width="9" stroke-linecap="round" opacity=".75"/>
+    </g>
+    <g transform="rotate(40 500 500)">
+      <path d="M404 620 L500 340 L596 620 Z" fill="#4E5A38"/>
+      <path d="M440 540 L560 540 M460 470 L540 470"
+            stroke="#2E1F19" stroke-width="9" stroke-linecap="round" opacity=".75"/>
+    </g>
+  <g transform="translate(690 660)">
+    <path d="M0 0 a70 70 0 0 1 0 -110 z" fill="#E9C86A"/>
+    <path d="M0 0 a70 70 0 0 1 0 -110" fill="none" stroke="#F2EAD9" stroke-width="8"/>
+  </g>
+  <g fill="#C79A4E" opacity=".7">
+    <circle cx="320" cy="700" r="9"/><circle cx="360" cy="726" r="7"/><circle cx="286" cy="656" r="6"/>
+  </g>
+  <rect width="1000" height="1000" filter="url(#n2572)" opacity="0.18" style="mix-blend-mode:overlay"/>
+</svg>

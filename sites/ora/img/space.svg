@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" width="1400" height="1000" preserveAspectRatio="xMidYMid slice" role="img">
+  <defs>
+    <filter id="n114" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" seed="114" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1400" height="1000" fill="#121714"/>
+
+  <rect width="1400" height="700" fill="#182019"/>
+  <rect y="700" width="1400" height="300" fill="#263024"/>
+  <rect y="700" width="1400" height="7" fill="#9FB394" opacity=".22"/>
+  <path d="M760 620 V300 a150 150 0 0 1 300 0 V620 Z" fill="#1B241C"/>
+  <path d="M760 620 V300 a150 150 0 0 1 300 0 V620" fill="none" stroke="#6E8265" stroke-width="8"/>
+  <path d="M910 150 V620 M760 420 H1060" stroke="#6E8265" stroke-width="6"/>
+  <path d="M790 604 L1020 380" stroke="#9FB394" stroke-width="22" opacity=".26"/>
+  <g stroke="#4A5A46" stroke-width="11" stroke-linecap="round">
+    <path d="M180 260 V620 M400 260 V620"/>
+    <path d="M180 330 H400 M180 420 H400 M180 510 H400" stroke-width="8"/>
+  </g>
+  
+  <g transform="translate(700 880) scale(0.86)">
+    <rect x="-300" y="-54" width="600" height="20" rx="10" fill="#6E8265"/>
+    <rect x="-300" y="-40" width="600" height="10" rx="5" fill="#4A5A46"/>
+    <rect x="-280" y="-30" width="26" height="30" rx="6" fill="#4A5A46"/>
+    <rect x="254" y="-30" width="26" height="30" rx="6" fill="#4A5A46"/>
+    <rect x="-170" y="-96" width="290" height="44" rx="12" fill="#E9E6DC" opacity=".88"/>
+    <rect x="-186" y="-104" width="70" height="16" rx="8" fill="#9FB394"/>
+    <path d="M250 -54 v-96" stroke="#4A5A46" stroke-width="14" stroke-linecap="round"/>
+    <path d="M250 -150 h-64" stroke="#4A5A46" stroke-width="14" stroke-linecap="round"/>
+    <g stroke="#6E8265" stroke-width="6" fill="none" opacity=".85">
+      <path d="M-296 -74 c40 -30 70 -30 110 0"/>
+      <path d="M-296 -74 c50 -14 80 -14 120 0"/>
+    </g>
+    <path d="M-300 -150 v96 M-300 -150 h56" stroke="#4A5A46" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  
+  <g transform="translate(150 890) scale(1.0)">
+    <rect x="-34" y="-120" width="68" height="120" rx="34" fill="#6E8265"/>
+    <ellipse cx="0" cy="-120" rx="34" ry="12" fill="#9FB394"/>
+    <ellipse cx="0" cy="-120" rx="13" ry="5" fill="#4A5A46"/>
+  </g>
+  
+  <g transform="translate(222 890) scale(0.9)">
+    <rect x="-34" y="-120" width="68" height="120" rx="34" fill="#4A5A46"/>
+    <ellipse cx="0" cy="-120" rx="34" ry="12" fill="#9FB394"/>
+    <ellipse cx="0" cy="-120" rx="13" ry="5" fill="#4A5A46"/>
+  </g>
+  
+  <g transform="translate(288 890) scale(0.85)">
+    <rect x="-34" y="-120" width="68" height="120" rx="34" fill="#6E8265"/>
+    <ellipse cx="0" cy="-120" rx="34" ry="12" fill="#9FB394"/>
+    <ellipse cx="0" cy="-120" rx="13" ry="5" fill="#4A5A46"/>
+  </g>
+  
+  <g transform="translate(1270 890) scale(0.85)">
+    <path d="M-52 0 h104 l-12 -92 h-80 z" fill="#4A5A46"/>
+    <g fill="none" stroke="#6E8265" stroke-width="7" stroke-linecap="round">
+      <path d="M0 -96 V-240"/><path d="M0 -150 C-40 -176 -62 -212 -64 -252"/>
+      <path d="M0 -180 C40 -206 64 -240 66 -280"/>
+    </g>
+    <g fill="#9FB394" opacity=".85">
+      <ellipse cx="-68" cy="-264" rx="40" ry="24" transform="rotate(-32 -68 -264)"/>
+      <ellipse cx="70" cy="-292" rx="42" ry="25" transform="rotate(28 70 -292)"/>
+      <ellipse cx="0" cy="-266" rx="36" ry="48"/>
+    </g>
+  </g>
+  <rect width="1400" height="1000" filter="url(#n114)" opacity="0.16" style="mix-blend-mode:overlay"/>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1250" width="1000" height="1250" preserveAspectRatio="xMidYMid slice" role="img">
+  <defs>
+    <filter id="n4677" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" seed="4677" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1000" height="1250" fill="#EFE5D5"/>
+
+  <circle cx="520" cy="560" r="392" fill="#E4D2B2" opacity=".55"/>
+  <!-- carafe -->
+  <path d="M372 760 h256 l44 330 a40 40 0 0 1 -40 44 H368 a40 40 0 0 1 -40 -44 z" fill="#FBF7F0"/>
+  <path d="M372 760 h256 l44 330 a40 40 0 0 1 -40 44 H368 a40 40 0 0 1 -40 -44 z" fill="none" stroke="#6B4A32" stroke-width="9"/>
+  <path d="M348 990 h304 l-16 100 a40 40 0 0 1 -40 44 H404 a40 40 0 0 1 -40 -44 z" fill="#6B4A32"/>
+  <path d="M672 852 a58 58 0 0 1 0 116" fill="none" stroke="#6B4A32" stroke-width="16"/>
+  <!-- cone -->
+  <path d="M300 470 h400 l-96 292 H396 z" fill="#C4643C"/>
+  <path d="M300 470 h400 l-96 292 H396 z" fill="none" stroke="#A64F2C" stroke-width="8"/>
+  <g stroke="#A64F2C" stroke-width="6" opacity=".55">
+    <path d="M380 470 L430 762 M460 470 L478 762 M540 470 L522 762 M620 470 L570 762"/>
+  </g>
+  <rect x="284" y="450" width="432" height="30" rx="15" fill="#A64F2C"/>
+  <!-- kettle -->
+  <g>
+    <path d="M118 262 h206 a26 26 0 0 1 26 26 l16 118 a44 44 0 0 1 -44 50 H120 a44 44 0 0 1 -44 -50 l16 -118 a26 26 0 0 1 26 -26 z" fill="#3E2A1C"/>
+    <rect x="168" y="228" width="106" height="36" rx="14" fill="#6B4A32"/>
+    <circle cx="221" cy="216" r="18" fill="#6B4A32"/>
+    <path d="M112 300 q109 -60 218 0" fill="none" stroke="#6B4A32" stroke-width="15" stroke-linecap="round" opacity=".55"/>
+    <path d="M62 300 c-52 10 -56 92 -6 118" fill="none" stroke="#3E2A1C" stroke-width="20" stroke-linecap="round"/>
+    <path d="M348 316 c86 4 116 40 142 96 c14 30 12 44 8 58" fill="none" stroke="#3E2A1C" stroke-width="24" stroke-linecap="round"/>
+  </g>
+  <path d="M496 476 C500 500 502 500 502 500" stroke="#6B4A32" stroke-width="9" stroke-linecap="round" opacity=".75"/>
+  <g fill="none" stroke="#6B4A32" stroke-width="8" stroke-linecap="round" opacity=".35">
+    <path d="M463 400 c-18 -33 18 -51 0 -86"/>
+    <path d="M500 409 c-18 -35 18 -55 0 -95"/>
+    <path d="M537 400 c-18 -33 18 -51 0 -86"/>
+  </g>
+  <rect width="1000" height="1250" filter="url(#n4677)" opacity="0.22" style="mix-blend-mode:overlay"/>
+</svg>

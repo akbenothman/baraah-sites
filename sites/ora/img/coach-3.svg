@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" preserveAspectRatio="xMidYMid slice" role="img">
+  <defs>
+    <filter id="n2322" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" seed="2322" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="800" height="1000" fill="#2F3A2C"/>
+
+  <circle cx="400" cy="440" r="272" fill="#A3B899" opacity=".14"/>
+  <path d="M280 700 V420 a120 120 0 0 1 240 0 V700 q-44 -34 -120 -34 q-76 0 -120 34 z" fill="#A3B899"/>
+  <path d="M358 540 h84 v104 q-42 26 -84 0 z" fill="#A3B899" opacity=".78"/>
+  <ellipse cx="400" cy="436" rx="108" ry="126" fill="#A3B899"/>
+  <path d="M116 1000 v-118 q0 -136 132 -184 q66 -24 152 -24 q86 0 152 24
+           q132 48 132 184 v118 z" fill="#A3B899"/>
+  <rect width="800" height="1000" filter="url(#n2322)" opacity="0.18" style="mix-blend-mode:overlay"/>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200" preserveAspectRatio="xMidYMid slice" role="img">
+  <defs>
+    <filter id="n7285" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" seed="7285" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1200" fill="#EFEAE1"/>
+
+  <path d="M150 720 C300 520 520 470 700 520 C900 576 1010 660 1046 760
+           C1076 846 980 900 800 894 C600 888 380 880 250 838 C160 808 120 776 150 720 Z"
+        fill="#C6B69C" opacity=".95"/>
+  <path d="M232 726 C360 596 560 560 700 596 C860 636 950 700 984 772"
+        fill="none" stroke="#F7F4EE" stroke-width="26" stroke-linecap="round" opacity=".7"/>
+  <path d="M300 790 C420 700 590 676 700 700" fill="none" stroke="#B79B77"
+        stroke-width="14" stroke-linecap="round" opacity=".45"/>
+  <circle cx="880" cy="360" r="118" fill="#F7F4EE"/>
+  <circle cx="854" cy="330" r="40" fill="#D8CBB6" opacity=".8"/>
+  <circle cx="336" cy="336" r="62" fill="#B79B77" opacity=".5"/>
+  <rect width="1200" height="1200" filter="url(#n7285)" opacity="0.22" style="mix-blend-mode:overlay"/>
+</svg>

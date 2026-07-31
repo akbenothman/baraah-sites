@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lacquer — Nail Studio</title>
+<meta name="description" content="A calm nail studio in Brooklyn. Structured manicures, considered colour, and appointments that actually start on time.">
+<meta name="theme-color" content="#F7EFEC">
+<meta property="og:title" content="Lacquer — Nail Studio">
+<meta property="og:description" content="Structured manicures, considered colour, appointments that start on time.">
+<meta property="og:image" content="img/hero.svg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='12' fill='%23D89A93'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav__in">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 30 30" width="24" height="24" aria-hidden="true">
+        <path d="M15 2c5 6 5 20 0 26C10 22 10 8 15 2z" fill="currentColor"/>
+      </svg>
+      Lacquer
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#studio">Studio</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav__end">
+      <a class="pill" href="#book">Book now</a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="drawer" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" hidden>
+  <a href="#services">Services</a>
+  <a href="#work">Work</a>
+  <a href="#studio">Studio</a>
+  <a href="#faq">FAQ</a>
+  <a href="#book">Book now</a>
+</div>
+
+<main id="main">
+
+<!-- ── hero ─────────────────────────────────────────────────────── -->
+<section class="hero" id="top">
+  <div class="hero__text">
+    <p class="eyebrow rise" style="--d:.05s">Brooklyn · Cobble Hill</p>
+    <h1 class="display rise" style="--d:.12s">
+      Nails worth<br>the <em>hour</em>.
+    </h1>
+    <p class="lede rise" style="--d:.2s">
+      A small studio with six chairs, natural light and a colour wall we're
+      genuinely proud of. Booked, seated and finished on schedule.
+    </p>
+    <div class="hero__cta rise" style="--d:.28s">
+      <a class="btn" href="#book">Book an appointment</a>
+      <a class="link" href="#services">See the menu <span aria-hidden="true">→</span></a>
+    </div>
+    <ul class="hero__facts rise" style="--d:.36s">
+      <li><strong>4.9</strong> average over 812 reviews</li>
+      <li><strong>Non-toxic</strong> 10-free polish only</li>
+    </ul>
+  </div>
+  <div class="hero__art rise" style="--d:.18s">
+    <img src="img/hands.svg" alt="A finished manicure in the studio" fetchpriority="high">
+    <div class="badge">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <defs><path id="circ" d="M50,50 m-34,0 a34,34 0 1,1 68,0 a34,34 0 1,1 -68,0"/></defs>
+        <text><textPath href="#circ">walk-ins welcome · walk-ins welcome · </textPath></text>
+      </svg>
+      <span aria-hidden="true">✦</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── colour strip ─────────────────────────────────────────────── -->
+<section class="swatches">
+  <p class="swatches__label reveal">This season's wall</p>
+  <ul class="swatches__row" id="swatches">
+    <li><button style="--c:#E8CFC6" data-name="Bare Linen" aria-label="Bare Linen"></button></li>
+    <li><button style="--c:#D89A93" data-name="Rose Clay" aria-label="Rose Clay"></button></li>
+    <li><button style="--c:#B0505A" data-name="Cherry Cola" aria-label="Cherry Cola"></button></li>
+    <li><button style="--c:#7E555C" data-name="Plum Ink" aria-label="Plum Ink"></button></li>
+    <li><button style="--c:#C8BFD4" data-name="Lilac Hour" aria-label="Lilac Hour"></button></li>
+    <li><button style="--c:#8FA394" data-name="Sage Milk" aria-label="Sage Milk"></button></li>
+    <li><button style="--c:#E4C07A" data-name="Butter" aria-label="Butter"></button></li>
+    <li><button style="--c:#2E2A2C" data-name="Off Black" aria-label="Off Black"></button></li>
+  </ul>
+  <p class="swatches__name" id="swatchName" role="status">Rose Clay</p>
+</section>
+
+<!-- ── services ─────────────────────────────────────────────────── -->
+<section class="services" id="services">
+  <header class="sec-head reveal">
+    <div>
+      <p class="eyebrow">The menu</p>
+      <h2 class="h2">Everything takes<br>as long as it takes.</h2>
+    </div>
+    <p class="sec-note">Prices include removal and a hand treatment.</p>
+  </header>
+
+  <ul class="svc">
+    <li class="svc__row reveal">
+      <span class="svc__name">Structured manicure</span>
+      <span class="svc__note">Our signature. Builder gel base, natural finish.</span>
+      <span class="svc__time">75 min</span>
+      <span class="svc__price">$78</span>
+    </li>
+    <li class="svc__row reveal" style="--d:.05s">
+      <span class="svc__name">Classic gel</span>
+      <span class="svc__note">Shape, cuticle work, one colour from the wall.</span>
+      <span class="svc__time">55 min</span>
+      <span class="svc__price">$62</span>
+    </li>
+    <li class="svc__row reveal" style="--d:.1s">
+      <span class="svc__name">Pedicure, warm stone</span>
+      <span class="svc__note">Soak, exfoliate, 15 minutes of nobody talking to you.</span>
+      <span class="svc__time">60 min</span>
+      <span class="svc__price">$85</span>
+    </li>
+    <li class="svc__row reveal" style="--d:.15s">
+      <span class="svc__name">Nail art, per finger</span>
+      <span class="svc__note">Chrome, French, hand-painted — bring a reference.</span>
+      <span class="svc__time">+10 min</span>
+      <span class="svc__price">$8</span>
+    </li>
+    <li class="svc__row reveal" style="--d:.2s">
+      <span class="svc__name">Soak-off &amp; repair</span>
+      <span class="svc__note">Gentle removal, cuticle oil, no drilling.</span>
+      <span class="svc__time">30 min</span>
+      <span class="svc__price">$35</span>
+    </li>
+  </ul>
+</section>
+
+<!-- ── steps ────────────────────────────────────────────────────── -->
+<section class="steps">
+  <article class="step reveal">
+    <span class="step__n">01</span>
+    <h3>Pick a time</h3>
+    <p>Book online in about forty seconds. We hold your slot for ten minutes.</p>
+  </article>
+  <article class="step reveal" style="--d:.08s">
+    <span class="step__n">02</span>
+    <h3>Choose from the wall</h3>
+    <p>Ninety-odd shades, all 10-free. Undecided is a valid answer — we'll help.</p>
+  </article>
+  <article class="step reveal" style="--d:.16s">
+    <span class="step__n">03</span>
+    <h3>Leave on time</h3>
+    <p>We build buffer into every booking, so late runs stay rare.</p>
+  </article>
+</section>
+
+<!-- ── work ─────────────────────────────────────────────────────── -->
+<section class="work" id="work">
+  <header class="sec-head reveal">
+    <h2 class="h2">Recent work</h2>
+    <a class="link" href="#work">See the full feed <span aria-hidden="true">→</span></a>
+  </header>
+  <div class="work__grid">
+    <figure class="reveal"><img src="img/work-1.svg" alt="Chrome French manicure" loading="lazy"></figure>
+    <figure class="reveal" style="--d:.06s"><img src="img/work-2.svg" alt="Micro-dot nail art in plum" loading="lazy"></figure>
+    <figure class="reveal" style="--d:.12s"><img src="img/work-3.svg" alt="Glossy rose clay set" loading="lazy"></figure>
+    <figure class="reveal" style="--d:.18s"><img src="img/work-4.svg" alt="Sheer milk bath finish" loading="lazy"></figure>
+  </div>
+</section>
+
+<!-- ── studio ───────────────────────────────────────────────────── -->
+<section class="studio" id="studio">
+  <div class="studio__media reveal"><img src="img/studio.svg" alt="Inside the studio" loading="lazy"></div>
+  <div class="studio__body reveal">
+    <p class="eyebrow">The studio</p>
+    <h2 class="h2">Quiet, bright,<br>properly ventilated.</h2>
+    <p>
+      We built the room we wanted to sit in: medical-grade sterilisation,
+      dust extraction at every station, and no chemical haze in the air.
+      Six chairs means it never feels like a factory.
+    </p>
+    <dl class="studio__facts">
+      <div><dt>Hours</dt><dd>Tue–Sat 10–19 · Sun 11–17</dd></div>
+      <div><dt>Where</dt><dd>212 Court St, Brooklyn NY</dd></div>
+      <div><dt>Parking</dt><dd>Metered on Court, free on Kane</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ── booking ──────────────────────────────────────────────────── -->
+<section class="book" id="book">
+  <div class="book__card reveal">
+    <div class="book__intro">
+      <p class="eyebrow">Book</p>
+      <h2 class="h2">Let's find you<br>a chair.</h2>
+      <p>Pick a service and a time. We'll confirm by text within the hour.</p>
+    </div>
+
+    <form class="book__form" id="bookForm" novalidate>
+      <div class="field">
+        <label for="svc">Service</label>
+        <select id="svc" name="service">
+          <option>Structured manicure — 75 min</option>
+          <option>Classic gel — 55 min</option>
+          <option>Pedicure, warm stone — 60 min</option>
+          <option>Soak-off &amp; repair — 30 min</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="date">Date</label>
+        <input id="date" name="date" type="date" value="2026-08-14">
+      </div>
+      <fieldset class="field field--full">
+        <legend>Time</legend>
+        <div class="slots" id="slots">
+          <button type="button" class="slot" data-slot>10:00</button>
+          <button type="button" class="slot" data-slot>11:30</button>
+          <button type="button" class="slot is-out" disabled>13:00</button>
+          <button type="button" class="slot" data-slot>14:30</button>
+          <button type="button" class="slot" data-slot>16:00</button>
+          <button type="button" class="slot is-out" disabled>17:30</button>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Ada Rowe" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="tel">Mobile</label>
+        <input id="tel" name="tel" type="tel" placeholder="(555) 019 2837" autocomplete="tel" required>
+      </div>
+      <button class="btn btn--full" type="submit">Request appointment</button>
+      <p class="book__msg" id="bookMsg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ── reviews ──────────────────────────────────────────────────── -->
+<section class="reviews">
+  <div class="reviews__row">
+    <blockquote class="reveal">
+      <p>“The only place that's never once run late on me.”</p>
+      <cite>Imogen T.</cite>
+    </blockquote>
+    <blockquote class="reveal" style="--d:.08s">
+      <p>“Three weeks in and not a single chip. I've stopped going anywhere else.”</p>
+      <cite>Dani F.</cite>
+    </blockquote>
+    <blockquote class="reveal" style="--d:.16s">
+      <p>“Genuinely calm. No fumes, no rushing, no upselling.”</p>
+      <cite>Marta L.</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ── faq ──────────────────────────────────────────────────────── -->
+<section class="faq" id="faq">
+  <h2 class="h2 reveal">Good questions</h2>
+  <div class="acc reveal">
+    <details>
+      <summary>Do you take walk-ins?<span aria-hidden="true"></span></summary>
+      <p>Most days, yes — usually before noon. Booking is safer on weekends,
+      and we release cancellations to the waitlist first.</p>
+    </details>
+    <details>
+      <summary>What's a structured manicure?<span aria-hidden="true"></span></summary>
+      <p>A thin layer of builder gel is used to reinforce the natural nail and
+      correct the apex. It looks like a normal manicure and wears for
+      three to four weeks.</p>
+    </details>
+    <details>
+      <summary>Can I bring my own polish?<span aria-hidden="true"></span></summary>
+      <p>Of course. There's no fee for it — we just can't guarantee wear time
+      on formulas we haven't used before.</p>
+    </details>
+    <details>
+      <summary>What's the cancellation policy?<span aria-hidden="true"></span></summary>
+      <p>Free up to 24 hours before. Inside that window we charge 50%, because
+      the chair usually stays empty.</p>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <div>
+      <a class="brand brand--lg" href="#top">
+        <svg viewBox="0 0 30 30" width="30" height="30" aria-hidden="true">
+          <path d="M15 2c5 6 5 20 0 26C10 22 10 8 15 2z" fill="currentColor"/>
+        </svg>
+        Lacquer
+      </a>
+      <p class="foot__note">212 Court St, Brooklyn NY 11201<br>hello@lacquer.studio · (718) 555 0148</p>
+    </div>
+    <nav class="foot__nav" aria-label="Footer">
+      <a href="#services">Services</a>
+      <a href="#book">Book</a>
+      <a href="#work">Work</a>
+      <a href="#faq">FAQ</a>
+      <a href="#studio">Gift cards</a>
+    </nav>
+  </div>
+  <div class="foot__bar">
+    <p>© 2026 Lacquer Nail Studio</p>
+    <p>Demo site — design &amp; build by <a href="../../index.html">baraah-sites</a></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

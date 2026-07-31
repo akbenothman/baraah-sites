@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fig &amp; Vine — Wood Fire &amp; Wine</title>
+<meta name="description" content="A thirty-seat room cooking over wood. Seasonal plates, low-intervention wine, and a kitchen you can see into.">
+<meta name="theme-color" content="#14100E">
+<meta property="og:title" content="Fig & Vine — Wood Fire & Wine">
+<meta property="og:description" content="A thirty-seat room cooking over wood.">
+<meta property="og:image" content="img/hero.svg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='%23C79A4E'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav__in">
+    <nav class="nav__links nav__links--l" aria-label="Primary">
+      <a href="#menu">Menu</a>
+      <a href="#story">Our story</a>
+    </nav>
+    <a class="brand" href="#top">Fig &amp; Vine</a>
+    <div class="nav__right">
+      <nav class="nav__links" aria-label="Secondary">
+        <a href="#visit">Find us</a>
+      </nav>
+      <a class="pill" href="#book">Reserve</a>
+    </div>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="drawer" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" hidden>
+  <a href="#menu">Menu</a>
+  <a href="#story">Our story</a>
+  <a href="#visit">Find us</a>
+  <a href="#book">Reserve</a>
+</div>
+
+<main id="main">
+
+<!-- ── hero ─────────────────────────────────────────────────────── -->
+<section class="hero" id="top">
+  <img class="hero__bg" src="img/hero.svg" alt="" aria-hidden="true">
+  <div class="hero__in">
+    <p class="eyebrow rise" style="--d:.05s">Wood fire &amp; wine · Since 2019</p>
+    <h1 class="display rise" style="--d:.14s">Everything<br><em>over flame.</em></h1>
+    <p class="lede rise" style="--d:.24s">
+      Thirty seats, one hearth, and a menu that changes when the market does.
+    </p>
+    <div class="hero__cta rise" style="--d:.32s">
+      <a class="btn" href="#book">Reserve a table</a>
+      <a class="link" href="#menu">Tonight's menu <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Wood fired</span><i>✦</i><span>Low intervention wine</span><i>✦</i>
+    <span>Market driven</span><i>✦</i><span>Open kitchen</span><i>✦</i>
+    <span>Wood fired</span><i>✦</i><span>Low intervention wine</span><i>✦</i>
+    <span>Market driven</span><i>✦</i><span>Open kitchen</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ── story ────────────────────────────────────────────────────── -->
+<section class="story" id="story">
+  <div class="story__body reveal">
+    <p class="eyebrow">The room</p>
+    <h2 class="h2">One fire.<br>No gas, no shortcuts.</h2>
+    <p>
+      We cook everything — the bread, the fish, the vegetables, occasionally
+      the dessert — over oak and vine cuttings. The hearth sits in the middle
+      of the room, which means the whole place smells like dinner and you can
+      watch your food happen.
+    </p>
+    <p>
+      The menu is written each morning after the market. If something ran out,
+      it ran out. We think that's the point.
+    </p>
+    <div class="story__sign">
+      <strong>Amara Vela</strong>
+      <span>Chef &amp; owner</span>
+    </div>
+  </div>
+  <figure class="story__media reveal">
+    <img src="img/chef.svg" alt="At the pass" loading="lazy">
+  </figure>
+</section>
+
+<!-- ── menu ─────────────────────────────────────────────────────── -->
+<section class="menu" id="menu">
+  <header class="sec-head reveal">
+    <div>
+      <p class="eyebrow">The card</p>
+      <h2 class="h2">What we're cooking</h2>
+    </div>
+    <div class="tabs" id="tabs" role="tablist" aria-label="Menu">
+      <button role="tab" data-tab="dinner">Dinner</button>
+      <button role="tab" data-tab="brunch">Brunch</button>
+      <button role="tab" data-tab="wine">Wine</button>
+    </div>
+  </header>
+
+  <div class="menu__panel reveal" id="panel"></div>
+
+  <p class="menu__note reveal">
+    Kitchen closes at 22:30. A discretionary 12.5% goes in full to the team.
+    Tell us about allergies and we'll cook around them.
+  </p>
+</section>
+
+<!-- ── plates ───────────────────────────────────────────────────── -->
+<section class="plates">
+  <figure class="reveal">
+    <img src="img/plate-1.svg" alt="Hearth bread with cultured butter" loading="lazy">
+    <figcaption>Hearth bread, cultured butter</figcaption>
+  </figure>
+  <figure class="reveal" style="--d:.08s">
+    <img src="img/plate-2.svg" alt="Charred greens with anchovy" loading="lazy">
+    <figcaption>Charred greens, anchovy, lemon</figcaption>
+  </figure>
+  <figure class="reveal" style="--d:.16s">
+    <img src="img/plate-3.svg" alt="Whole fish over coals" loading="lazy">
+    <figcaption>Whole fish, over coals</figcaption>
+  </figure>
+</section>
+
+<!-- ── quote ────────────────────────────────────────────────────── -->
+<section class="quote reveal">
+  <p>“The best argument in the city for cooking one thing properly instead of ten things nearly.”</p>
+  <cite>The Weekend Review — ★★★★★</cite>
+</section>
+
+<!-- ── booking ──────────────────────────────────────────────────── -->
+<section class="book" id="book">
+  <div class="book__in reveal">
+    <div class="book__copy">
+      <p class="eyebrow">Reservations</p>
+      <h2 class="h2">Book a table</h2>
+      <p>
+        We hold a handful of seats at the counter for walk-ins every night.
+        For everything else, here's the diary.
+      </p>
+      <dl class="book__hours">
+        <div><dt>Wed – Sat</dt><dd>18:00 – 23:00</dd></div>
+        <div><dt>Sunday</dt><dd>12:00 – 17:00</dd></div>
+        <div><dt>Mon – Tue</dt><dd>Closed</dd></div>
+      </dl>
+    </div>
+
+    <form class="book__form" id="bookForm" novalidate>
+      <div class="field">
+        <label for="date">Date</label>
+        <input id="date" type="date" value="2026-08-14">
+      </div>
+      <div class="field">
+        <label for="party">Guests</label>
+        <select id="party">
+          <option>2 guests</option><option>3 guests</option>
+          <option>4 guests</option><option>5 guests</option>
+          <option>6 guests</option><option>Larger party</option>
+        </select>
+      </div>
+      <fieldset class="field field--full">
+        <legend>Sitting</legend>
+        <div class="times" id="times">
+          <button type="button" data-time>18:00</button>
+          <button type="button" data-time>18:45</button>
+          <button type="button" data-time>19:30</button>
+          <button type="button" class="is-out" disabled>20:15</button>
+          <button type="button" data-time>21:00</button>
+          <button type="button" data-time>21:45</button>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Amara Vela" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+      </div>
+      <button class="btn btn--full" type="submit">Request a table</button>
+      <p class="book__msg" id="bookMsg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ── visit ────────────────────────────────────────────────────── -->
+<section class="visit" id="visit">
+  <div class="visit__media reveal"><img src="img/room.svg" alt="The dining room" loading="lazy"></div>
+  <div class="visit__body reveal">
+    <p class="eyebrow">Find us</p>
+    <h2 class="h2">44 Ossington Lane</h2>
+    <p>
+      Between the bookshop and the laundrette, black door, no sign.
+      Nearest station is Ladbroke Grove, six minutes on foot.
+    </p>
+    <ul class="ticks">
+      <li>Counter seating held for walk-ins nightly</li>
+      <li>Step-free entrance and accessible WC</li>
+      <li>Whole-room hire for 30, Mondays and Tuesdays</li>
+    </ul>
+    <a class="link" href="#visit">Open in maps <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <div>
+      <a class="brand brand--lg" href="#top">Fig &amp; Vine</a>
+      <p class="foot__note">
+        44 Ossington Lane, London W11<br>
+        hello@figandvine.co · 020 7946 0187
+      </p>
+    </div>
+    <nav class="foot__nav" aria-label="Footer">
+      <div><h4>Eat</h4><a href="#menu">Dinner</a><a href="#menu">Brunch</a><a href="#menu">Wine list</a></div>
+      <div><h4>Visit</h4><a href="#book">Reservations</a><a href="#visit">Private hire</a><a href="#visit">Gift cards</a></div>
+      <div><h4>Hours</h4><span>Wed–Sat 18:00–23:00</span><span>Sun 12:00–17:00</span><span>Mon–Tue closed</span></div>
+    </nav>
+  </div>
+  <div class="foot__bar">
+    <p>© 2026 Fig &amp; Vine</p>
+    <p>Demo site — design &amp; build by <a href="../../index.html">baraah-sites</a></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
