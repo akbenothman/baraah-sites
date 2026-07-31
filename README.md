@@ -128,6 +128,7 @@ media/gallery/*.jpg   1280x769 at 2x — Fiverr's recommended gig image ratio
 media/full/*.jpg      each page top to bottom, for portfolio/work-sample slots
 media/gig-promo.mp4               51s edited cut, 1080p — the one to put on the gig
 media/portfolio-walkthrough.mp4   63s plain scroll-through, 1080p
+media/baraah-sites-portfolio.pdf  8-page deck for the gig's PDF slot
 ```
 
 `gig-promo.mp4` opens on a title card, shows each site being *used* — the
@@ -142,7 +143,11 @@ python3 tools/fetch_fonts.py    # once — caches the webfonts locally
 node tools/shots.js             # stills
 node tools/promo.js             # edited gig video
 node tools/video.js             # plain walkthrough
+node tools/pdf.js               # portfolio deck (needs shots.js first)
 ```
+
+The deck lives in `tools/deck/deck.html` — ordinary HTML with an `@page` rule,
+so editing a price or a description is a text change, not a design tool.
 
 Two environment quirks the capture scripts work around, both worth knowing if
 you ever move this to another machine:

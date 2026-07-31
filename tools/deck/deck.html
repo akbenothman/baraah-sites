@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>baraah-sites — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4 landscape; margin: 0; }
+
+  :root{
+    --bg:#0E0E10; --bg-2:#151518; --card:#1A1A1E;
+    --ivory:#EAE7E0; --mute:#8E8B84; --accent:#D8CFC0;
+    --line:rgba(234,231,224,.14);
+    --sans:'Inter','Helvetica Neue',system-ui,sans-serif;
+    --serif:'Instrument Serif',Georgia,serif;
+  }
+  *{margin:0;box-sizing:border-box}
+  body{font-family:var(--sans);font-weight:300;background:var(--bg);color:var(--ivory);
+    -webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+  .page{width:297mm;height:210mm;padding:16mm 18mm;position:relative;overflow:hidden;
+    background:var(--bg);display:flex;flex-direction:column;
+    break-after:page;page-break-after:always}
+  .page:last-child{break-after:auto;page-break-after:auto}
+
+  .mark{display:flex;align-items:center;gap:2.4mm;font-size:11pt;letter-spacing:-.02em}
+  .mark i{width:3.2mm;height:3.2mm;border-radius:50%;background:var(--accent);display:block}
+  .eyebrow{font-size:7.5pt;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+  h1{font-size:40pt;line-height:1.02;letter-spacing:-.035em;font-weight:300}
+  h2{font-size:26pt;line-height:1.05;letter-spacing:-.03em;font-weight:300}
+  h3{font-size:12pt;letter-spacing:-.02em;font-weight:400}
+  em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);
+    letter-spacing:-.015em}
+  p{font-size:10pt;line-height:1.6;color:var(--mute)}
+  .rule{height:.35mm;background:var(--line);width:100%}
+
+  .fill{flex:1;display:flex;flex-direction:column;justify-content:center}
+  .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;
+    font-size:7.5pt;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);
+    padding-top:5mm;border-top:.35mm solid var(--line)}
+
+  /* ---- cover ---- */
+  .cover{justify-content:space-between}
+  .cover__mid{flex:1;display:flex;flex-direction:column;justify-content:center}
+  .cover h1{font-size:46pt;margin:0 0 7mm;max-width:20ch}
+  .cover .lead{font-size:11.5pt;max-width:62ch;color:var(--mute);line-height:1.6}
+  .strip{display:grid;grid-template-columns:repeat(5,1fr);gap:3.5mm;margin:10mm 0 0}
+  .strip img{width:100%;height:34mm;object-fit:cover;object-position:top center;
+    border-radius:1.6mm;border:.3mm solid var(--line)}
+  .claims{display:flex;gap:14mm;font-size:8pt;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--mute);margin-top:7mm}
+
+  /* ---- how it works ---- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;margin:8mm 0}
+  .step{background:var(--bg-2);border-radius:2.4mm;padding:7mm}
+  .step b{display:block;font-family:var(--serif);font-size:20pt;color:var(--accent);
+    font-weight:400;line-height:1;margin-bottom:3mm}
+  .step h3{margin-bottom:2mm}
+  .included{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm 10mm;margin-top:6mm}
+  .included li{list-style:none;font-size:9.5pt;color:var(--mute);position:relative;
+    padding-left:6mm}
+  .included li::before{content:'✓';position:absolute;left:0;color:var(--accent)}
+
+  /* ---- a site ---- */
+  .site{display:grid;grid-template-columns:72mm 1fr;gap:11mm;flex:1;align-items:center;
+    margin:9mm 0 4mm}
+  .site__body h2{margin:3mm 0 4mm}
+  .site__body p{margin-bottom:5mm}
+  .feat{list-style:none;display:grid;gap:2.6mm;margin-top:1mm}
+  .feat li{font-size:9pt;color:var(--mute);position:relative;padding-left:5mm}
+  .feat li::before{content:'';position:absolute;left:0;top:1.6mm;width:1.6mm;height:1.6mm;
+    border-radius:50%;background:var(--accent)}
+  .tags{display:flex;gap:1.6mm;flex-wrap:wrap;margin-top:6mm}
+  .tags span{font-size:7pt;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);
+    padding:1.4mm 3mm;border-radius:20mm;border:.3mm solid var(--line)}
+  .shot{border-radius:2.4mm;overflow:hidden;border:.3mm solid var(--line);
+    background:var(--card);align-self:center}
+  .shot img{width:100%;height:auto;display:block}
+
+  /* ---- pricing ---- */
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin:8mm 0 6mm}
+  .tier{background:var(--bg-2);border-radius:2.4mm;padding:8mm;display:flex;
+    flex-direction:column}
+  .tier--best{background:var(--card);border:.35mm solid rgba(216,207,192,.34)}
+  .tier .name{font-size:8pt;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+  .tier .what{font-size:11pt;margin-top:1.5mm}
+  .tier .price{font-size:26pt;letter-spacing:-.04em;color:var(--accent);margin:3mm 0 4mm;
+    line-height:1}
+  .tier ul{list-style:none;display:grid;gap:2.2mm;flex:1}
+  .tier li{font-size:9pt;color:var(--mute);position:relative;padding-left:5mm}
+  .tier li::before{content:'';position:absolute;left:0;top:1.6mm;width:1.6mm;height:1.6mm;
+    border-radius:50%;background:var(--accent);opacity:.75}
+  .tier .ship{margin-top:5mm;padding-top:4mm;border-top:.35mm solid var(--line);
+    font-size:9pt;color:var(--ivory)}
+  .tier .ship i{font-style:normal;color:var(--mute)}
+  .close{display:flex;justify-content:space-between;align-items:flex-end;gap:10mm}
+  .close p{max-width:52ch}
+</style>
+</head>
+<body>
+
+<!-- 1 — cover -->
+<section class="page cover">
+  <div class="mark"><i></i> baraah-sites</div>
+  <div class="cover__mid">
+    <h1>Pick a design.<br><em>I'll make it yours.</em></h1>
+    <p class="lead">
+      Five complete websites, hand-coded and ready to be rebuilt around your
+      business. Choose the one closest to what you do — I'll swap the colours,
+      the words and the pictures, and put it live.
+    </p>
+    <div class="claims">
+      <span>Hand-coded, no page builders</span>
+      <span>Live in 1–3 days</span>
+      <span>You own the files</span>
+    </div>
+  </div>
+  <div class="strip">
+    <img src="../../media/gallery/verano.jpg" alt="Verano">
+    <img src="../../media/gallery/lacquer.jpg" alt="Lacquer">
+    <img src="../../media/gallery/halo.jpg" alt="Halo">
+    <img src="../../media/gallery/ora.jpg" alt="Ora">
+    <img src="../../media/gallery/fig.jpg" alt="Fig &amp; Vine">
+  </div>
+  <div class="foot"><span>Portfolio 2026</span><span>baraah-sites</span></div>
+</section>
+
+<!-- 2 — how it works -->
+<section class="page">
+  <div class="mark"><i></i> baraah-sites</div>
+  <div class="fill">
+    <p class="eyebrow">How it works</p>
+    <h2 style="margin-top:4mm">Three steps.<br>No calls required.</h2>
+    <div class="steps">
+      <div class="step">
+        <b>01</b>
+        <h3>You pick a design</h3>
+        <p>Tell me which of the five is closest to your business, and send
+           whatever copy and photos you already have. A paragraph is enough.</p>
+      </div>
+      <div class="step">
+        <b>02</b>
+        <h3>I send a real build</h3>
+        <p>Not a mockup — a working page you can click through on your phone,
+           with your colours, your words and your images in place.</p>
+      </div>
+      <div class="step">
+        <b>03</b>
+        <h3>We tighten it up</h3>
+        <p>Two rounds of changes, then I hand over the files or put it live on
+           your domain. Hosting setup included.</p>
+      </div>
+    </div>
+    <div class="rule"></div>
+    <ul class="included">
+      <li>Mobile-first responsive</li>
+      <li>Loads in under a second</li>
+      <li>SEO tags &amp; social previews</li>
+      <li>Accessible, semantic markup</li>
+      <li>Contact or booking form</li>
+      <li>You own all the files</li>
+    </ul>
+  </div>
+  <div class="foot"><span>How it works</span><span>02</span></div>
+</section>
+
+<!-- 3–7 — the designs -->
+<section class="page">
+  <div class="mark"><i></i> baraah-sites</div>
+  <div class="site">
+    <div class="site__body">
+      <p class="eyebrow">Design 01 · Coffee &amp; food retail</p>
+      <h2>Verano</h2>
+      <p>Warm and editorial, built to sell a product and fill a room. Suits
+         roasters, bakeries, delis and small food brands.</p>
+      <ul class="feat">
+        <li>Product cards with add-to-bag</li>
+        <li>Full café menu with prices</li>
+        <li>Rotating customer reviews</li>
+        <li>Two-location opening hours and map</li>
+      </ul>
+      <div class="tags"><span>Shop</span><span>Menu</span><span>Locations</span></div>
+    </div>
+    <div class="shot"><img src="../../media/gallery/verano.jpg" alt="The Verano home page"></div>
+  </div>
+  <div class="foot"><span>Design 01 — Verano</span><span>03</span></div>
+</section>
+
+<section class="page">
+  <div class="mark"><i></i> baraah-sites</div>
+  <div class="site">
+    <div class="site__body">
+      <p class="eyebrow">Design 02 · Salons &amp; appointments</p>
+      <h2>Lacquer</h2>
+      <p>Soft and rounded, built around getting people booked. Suits nail and
+         hair salons, barbers, lash and brow studios, therapists.</p>
+      <ul class="feat">
+        <li>Booking form with live time slots</li>
+        <li>Service menu with prices and durations</li>
+        <li>Colour picker that re-themes the page</li>
+        <li>Accordion FAQ and opening hours</li>
+      </ul>
+      <div class="tags"><span>Booking</span><span>Price list</span><span>FAQ</span></div>
+    </div>
+    <div class="shot"><img src="../../media/gallery/lacquer.jpg" alt="The Lacquer home page"></div>
+  </div>
+  <div class="foot"><span>Design 02 — Lacquer</span><span>04</span></div>
+</section>
+
+<section class="page">
+  <div class="mark"><i></i> baraah-sites</div>
+  <div class="site">
+    <div class="site__body">
+      <p class="eyebrow">Design 03 · Products &amp; e-commerce</p>
+      <h2>Halo</h2>
+      <p>Quiet and expensive-looking, built to sell a small range well. Suits
+         skincare, candles, jewellery, supplements — any short product line.</p>
+      <ul class="feat">
+        <li>Product page with variant switching</li>
+        <li>Quantity picker and bag</li>
+        <li>Ingredients or specification table</li>
+        <li>Review wall and bundle upsell</li>
+      </ul>
+      <div class="tags"><span>E-commerce</span><span>Product page</span><span>Reviews</span></div>
+    </div>
+    <div class="shot"><img src="../../media/gallery/halo.jpg" alt="The Halo home page"></div>
+  </div>
+  <div class="foot"><span>Design 03 — Halo</span><span>05</span></div>
+</section>
+
+<section class="page">
+  <div class="mark"><i></i> baraah-sites</div>
+  <div class="site">
+    <div class="site__body">
+      <p class="eyebrow">Design 04 · Studios &amp; memberships</p>
+      <h2>Ora</h2>
+      <p>Dark and structural, built around a timetable. Suits pilates and yoga
+         studios, gyms, climbing walls, dance and martial arts schools.</p>
+      <ul class="feat">
+        <li>Seven-day class schedule with spaces left</li>
+        <li>Membership tiers, monthly or yearly</li>
+        <li>Coach profiles</li>
+        <li>Intro-offer signup</li>
+      </ul>
+      <div class="tags"><span>Schedule</span><span>Memberships</span><span>Dark UI</span></div>
+    </div>
+    <div class="shot"><img src="../../media/gallery/ora.jpg" alt="The Ora home page"></div>
+  </div>
+  <div class="foot"><span>Design 04 — Ora</span><span>06</span></div>
+</section>
+
+<section class="page">
+  <div class="mark"><i></i> baraah-sites</div>
+  <div class="site">
+    <div class="site__body">
+      <p class="eyebrow">Design 05 · Restaurants &amp; bars</p>
+      <h2>Fig &amp; Vine</h2>
+      <p>Candlelit and high-contrast, built around a menu and a booking. Suits
+         restaurants, wine bars, cafés and private dining.</p>
+      <ul class="feat">
+        <li>Tabbed menus — dinner, brunch, drinks</li>
+        <li>Reservation form with sittings and party size</li>
+        <li>Dish gallery</li>
+        <li>Hours, address and private hire</li>
+      </ul>
+      <div class="tags"><span>Reservations</span><span>Tabbed menu</span><span>Hours</span></div>
+    </div>
+    <div class="shot"><img src="../../media/gallery/fig.jpg" alt="The Fig and Vine home page"></div>
+  </div>
+  <div class="foot"><span>Design 05 — Fig &amp; Vine</span><span>07</span></div>
+</section>
+
+<!-- 8 — packages -->
+<section class="page">
+  <div class="mark"><i></i> baraah-sites</div>
+  <div class="fill">
+    <p class="eyebrow">Packages</p>
+    <h2 style="margin-top:4mm">Pick a size.</h2>
+    <div class="tiers">
+      <div class="tier">
+        <span class="name">Basic</span>
+        <span class="what">Landing page</span>
+        <span class="price">$50</span>
+        <ul>
+          <li>One long, well-paced page</li>
+          <li>Built on one of the five designs</li>
+          <li>Your colours, copy and images</li>
+          <li>Contact or booking form</li>
+        </ul>
+        <span class="ship">Delivered in 3 days <i>· 1-day for +$30</i></span>
+      </div>
+      <div class="tier tier--best">
+        <span class="name">Standard</span>
+        <span class="what">Full brand site</span>
+        <span class="price">$100</span>
+        <ul>
+          <li>Up to 6 pages or sections</li>
+          <li>Menus, galleries, pricing, FAQ</li>
+          <li>Booking or reservation flow</li>
+          <li>Copy polish included</li>
+        </ul>
+        <span class="ship">Delivered in 2 days <i>· 1-day for +$50</i></span>
+      </div>
+      <div class="tier">
+        <span class="name">Premium</span>
+        <span class="what">Store front</span>
+        <span class="price">$200</span>
+        <ul>
+          <li>Product pages &amp; collections</li>
+          <li>Cart and checkout hooked up</li>
+          <li>Shopify or Stripe</li>
+          <li>Everything in Standard</li>
+        </ul>
+        <span class="ship">Delivered in 1 day</span>
+      </div>
+    </div>
+    <div class="close">
+      <div>
+        <h2 style="font-size:20pt">Tell me what you do.<br><em>I'll build the site.</em></h2>
+      </div>
+      <p>Message me on Fiverr with your business and the design you like.
+         I reply the same day, and I'll tell you honestly if a different
+         package suits you better.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Packages</span><span>baraah-sites</span></div>
+</section>
+
+</body>
+</html>
