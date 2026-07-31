@@ -145,12 +145,7 @@ it.
 
 ## Before you publish this as your portfolio
 
-The hub is branded **baraah-sites** and its *Start a project* buttons point at
-`fiverr.com/baraah-sites`. Two things left to check:
-
-- Swap that profile URL for a specific **gig** URL if you'd rather land buyers
-  on one gig than on your profile.
-- Adjust the prices in the "What I build" section to match your real gigs.
-
-The five brands are fictional. Keep it that way, or say plainly that they're
-concept pieces — don't present them as delivered client work.
+- Point the *Start a project* buttons at your actual Fiverr gig URL.
+- Adjust the prices in the "What I build" section to match your gigs.
+- The five brands are fictional. Keep it that way, or say plainly that they're
+  concept pieces — don't present them as delivered client work.
