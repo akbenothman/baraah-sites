@@ -119,6 +119,30 @@ node tools/thumbs.js
 
 ---
 
+## Marketing assets
+
+`media/` holds the images and video used for the Fiverr gig listing:
+
+```
+media/gallery/*.jpg   1280x769 at 2x — Fiverr's recommended gig image ratio
+media/full/*.jpg      each page top to bottom, for portfolio/work-sample slots
+media/portfolio-walkthrough.mp4   61s scroll-through of all six pages
+```
+
+Rebuild them after a design change:
+
+```bash
+python3 tools/fetch_fonts.py    # once — caches the webfonts locally
+node tools/shots.js             # stills
+node tools/video.js             # walkthrough video
+```
+
+The font cache exists because Chromium in some sandboxes can't reach
+fonts.googleapis.com; the capture scripts serve the cached copies via request
+interception so screenshots show the real typefaces rather than fallbacks.
+
+---
+
 ## Fonts
 
 Each site loads its typefaces from Google Fonts and falls back to a
