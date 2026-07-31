@@ -126,15 +126,22 @@ node tools/thumbs.js
 ```
 media/gallery/*.jpg   1280x769 at 2x — Fiverr's recommended gig image ratio
 media/full/*.jpg      each page top to bottom, for portfolio/work-sample slots
-media/portfolio-walkthrough.mp4   61s scroll-through of all six pages
+media/gig-promo.mp4               48s edited cut — the one to put on the gig
+media/portfolio-walkthrough.mp4   61s plain scroll-through, no edit
 ```
+
+`gig-promo.mp4` opens on a title card, shows each site being *used* — the
+colour wall re-theming Lacquer, shades switching on Halo, schedule and pricing
+on Ora, menu tabs on Fig — and closes on the packages. The offer is burned in
+because Fiverr autoplays muted.
 
 Rebuild them after a design change:
 
 ```bash
 python3 tools/fetch_fonts.py    # once — caches the webfonts locally
 node tools/shots.js             # stills
-node tools/video.js             # walkthrough video
+node tools/promo.js             # edited gig video
+node tools/video.js             # plain walkthrough
 ```
 
 The font cache exists because Chromium in some sandboxes can't reach
