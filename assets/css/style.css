@@ -171,7 +171,11 @@ section{padding-inline:var(--pad)}
   text-align:center}
 .contact__in p{color:var(--mute);max-width:46ch;margin:1.5rem auto 2.25rem}
 .contact__cta{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
-.contact__small{font-size:.78rem;color:var(--mute);opacity:.6;margin-top:2.5rem}
+.contact__small{font-size:.92rem;color:var(--mute);margin-top:2.5rem;
+  display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+.contact__small a{border-bottom:1px solid var(--line);padding-bottom:.15rem;
+  transition:color .3s var(--ease),border-color .3s var(--ease)}
+.contact__small a:hover{color:var(--ivory);border-color:var(--accent)}
 
 /* --- footer --------------------------------------------------------- */
 .foot{padding:clamp(2.5rem,5vw,4rem) var(--pad) 2rem;border-top:1px solid var(--line)}
