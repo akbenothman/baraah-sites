@@ -119,6 +119,35 @@ node tools/thumbs.js
 
 ---
 
+## Etsy shop assets
+
+`media/etsy/` and `media/templates/` hold everything the shop needs. None of it
+can be uploaded automatically — Etsy has no API for listing creation from here,
+so this is all built to be copy-pasted and file-uploaded by hand.
+
+```
+media/templates/*.zip             the five sellable template downloads
+media/etsy/01…10-*.jpg            listing gallery, 2000x2000
+media/etsy/listing-video.mp4      14s square listing video
+media/etsy/Welcome-and-Project-Questionnaire.pdf   the file buyers get at checkout
+media/etsy/listings.html          every title, tag and description, with copy buttons
+```
+
+Rebuild:
+
+```bash
+node tools/guide.js                     # per-template setup guides
+python3 tools/package_templates.py      # zips them up
+node tools/etsy_images.js               # the ten listing images
+node tools/etsy_video.js                # the listing video
+node tools/questionnaire.js             # the buyer questionnaire
+```
+
+Tag lengths and title lengths in `listings.html` are validated against Etsy's
+limits (20 and 140 characters) — re-check if you edit them.
+
+---
+
 ## Marketing assets
 
 `media/` holds the images and video used for the Fiverr gig listing:
