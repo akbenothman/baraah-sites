@@ -131,6 +131,7 @@ media/etsy/01…10-*.jpg            listing gallery, 2000x2000
 media/etsy/listing-video.mp4      14s square listing video
 media/etsy/Welcome-and-Project-Questionnaire.pdf   the file buyers get at checkout
 media/etsy/listings.html          every title, tag and description, with copy buttons
+media/etsy/logo/                  shop icon and banner — see the README in there
 ```
 
 Rebuild:
@@ -141,7 +142,13 @@ python3 tools/package_templates.py      # zips them up
 node tools/etsy_images.js               # the ten listing images
 node tools/etsy_video.js                # the listing video
 node tools/questionnaire.js             # the buyer questionnaire
+node tools/logo.js                      # shop icon + banner, all colourways
 ```
+
+`logo.js` renders four marks across four colourways and lays them out in
+`options.png` beside 48px crops, because that is roughly the size an Etsy shop
+icon lives at in search — a mark that only holds together at 500px is the wrong
+mark, and the sheet is there to catch that before it's uploaded.
 
 Tag lengths and title lengths in `listings.html` are validated against Etsy's
 limits (20 and 140 characters) — re-check if you edit them.
