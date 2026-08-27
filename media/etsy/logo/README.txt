@@ -44,17 +44,40 @@ Four colourways, all from the same palette as the websites:
   d  Sand    #D8CFC0 ground, ink mark
 
 
+THE PINK COLOURWAY  (window . sand, pink accent)
+------------------------------------------------
+
+See options-pink.png — rendered on white, because that is what an Etsy page is.
+
+  icon-window-sand-petal.png   #E8AFB8   coolest and most saturated
+  icon-window-sand-blush.png   #F2C4C4   clean, softer
+  icon-window-sand-rose.png    #EDBAB4   dustiest; reads slightly peach
+  icon-window-sand-shell.png   #F6D2CE   palest; nearly white at 48px
+
+Pair with banner-ink-<shade>-1600x400.png.
+
+Two things about this colourway worth knowing.
+
+It exists for the window mark only.  In the window, the accent dot sits on the
+dark bar, where a pale pink has plenty of contrast.  On the other three marks
+the accent lands straight on the sand and pale-on-pale goes muddy, so those
+were not rendered rather than shipped weak.
+
+The matching banner is on ink, not sand, for the same reason — pink "sites" on
+a sand ground is close to unreadable, on near-black it sings, and the ink also
+ties back to the dark bar inside the icon.
+
+
 RECOMMENDATION
 --------------
 
-icon-monogram-b.png  (monogram, Clay) with banner-a-1600x400.png (Ink).
+icon-window-sand-petal.png with banner-ink-petal-1600x400.png.
 
-Etsy search results are a wall of white product photos, so the terracotta
-square is the one that stops a scroll, and "b." still reads at 48px.  The ink
-banner then matches the portfolio site exactly.
+Of the four shades, petal is the one that still reads as pink rather than as
+pale-something at 48px, which is the size that matters.  Blush is the softer
+alternative and holds up nearly as well; shell washes out at small sizes.
 
-If you'd rather the shop feel light and calm, use icon-monogram-c.png with
-banner-c-1600x400.png instead.  Both are correct — it's a taste call.
+If you ever want the orange back, icon-window-d.png is the same mark in clay.
 
 
 COLOURS, IF YOU EVER NEED THEM

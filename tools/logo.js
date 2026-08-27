@@ -114,6 +114,25 @@ const banner = (t) => `<!DOCTYPE html><html><head><meta charset="utf-8">${FONTS}
 
 const ICONS = { monogram, window: window_, stack, dot };
 
+/* --- the pink colourway ---------------------------------------------------
+   Sand ground, pink accent. Rendered for the window mark only, and that is a
+   deliberate limit rather than an oversight: in the window the accent dot sits
+   on the dark bar, where a pale pink has plenty of contrast. In the other three
+   marks the accent lands straight on the sand, and pale-on-pale goes muddy.
+
+   The banner flips to an ink ground for the same reason — pink "sites" on sand
+   is close to unreadable, on near-black it sings, and the ink also ties back to
+   the dark bar inside the icon. */
+const PINKS = {
+  blush: '#F2C4C4',   // clean, unambiguously pink
+  rose:  '#EDBAB4',   // dustier, closest to the clay already in the palette
+  petal: '#E8AFB8',   // cooler, the most saturated of the four
+  shell: '#F6D2CE',   // palest
+};
+
+const sandPink = (hex) => ({ name: 'Sand', bg: '#D8CFC0', fg: '#1C1A17', dot: hex });
+const inkPink = (hex) => ({ name: 'Ink', bg: '#0E0E10', fg: '#EAE7E0', dot: hex });
+
 async function shoot(page, html, out, w, h, scale = 2) {
   const tmp = path.join(ROOT, 'build/logo-tmp.html');
   fs.writeFileSync(tmp, html);
@@ -151,6 +170,18 @@ async function shoot(page, html, out, w, h, scale = 2) {
     await shoot(page, banner(theme), path.join(OUT, `banner-${key}-3360x840.png`), 1680, 420);
   }
 
+  // --- the pink colourway, one file per shade so the choice is a file pick ---
+  const pinks = [];
+  for (const [shade, hex] of Object.entries(PINKS)) {
+    const file = path.join(OUT, `icon-window-sand-${shade}.png`);
+    await shoot(page, window_(sandPink(hex)), file, 500, 500);
+    pinks.push({ shade, hex, file });
+    await shoot(page, banner(inkPink(hex)),
+      path.join(OUT, `banner-ink-${shade}-1600x400.png`), 1600, 400, 1);
+    await shoot(page, banner(inkPink(hex)),
+      path.join(OUT, `banner-ink-${shade}-3360x840.png`), 1680, 420);
+  }
+
   // --- contact sheet: every option, plus the size it actually gets seen at ---
   const cell = (m) => `<figure>
     <img class="big" src="file://${m.file}" alt="">
@@ -186,6 +217,41 @@ async function shoot(page, html, out, w, h, scale = 2) {
   await page.evaluate(() => document.fonts.ready);
   await page.waitForTimeout(400);
   await page.screenshot({ path: path.join(OUT, 'options.png'), fullPage: true });
+
+  // --- pink shades, judged on white, because that is Etsy's page colour ------
+  const pinkSheet = `<!DOCTYPE html><html><head><meta charset="utf-8">${FONTS}<style>${BASE}
+    body{width:1500px;background:#fff;color:#1C1A17;padding:56px;overflow:auto}
+    h1{font-size:30px;font-weight:300;letter-spacing:-.03em;margin-bottom:6px}
+    p{color:#6B665F;font-size:14px;margin-bottom:40px}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+    figure{margin:0}
+    .big{width:100%;border-radius:18px;display:block}
+    .row{display:flex;align-items:center;gap:12px;margin-top:14px;
+      font-size:12px;color:#6B665F;letter-spacing:.04em}
+    .sm{width:48px;height:48px;border-radius:9px}
+    .sm.circ{border-radius:50%}
+    .row b{font-weight:400;color:#1C1A17;text-transform:capitalize}
+    .bn{margin-top:12px;width:100%;border-radius:8px;display:block}
+  </style></head><body>
+    <h1>Window · Sand — pink shades</h1>
+    <p>On white, because that is what an Etsy page is. Each one shown full size,
+       at 48px square and 48px circle, then with its matching ink banner.</p>
+    <div class="grid">${pinks.map((p) => `<figure>
+      <img class="big" src="file://${p.file}" alt="">
+      <div class="row">
+        <img class="sm" src="file://${p.file}" alt="">
+        <img class="sm circ" src="file://${p.file}" alt="">
+        <span><b>${p.shade}</b><br>${p.hex}</span>
+      </div>
+      <img class="bn" src="file://${path.join(OUT, `banner-ink-${p.shade}-1600x400.png`)}" alt="">
+    </figure>`).join('')}</div>
+  </body></html>`;
+
+  fs.writeFileSync(sheetFile, pinkSheet);
+  await page.goto('file://' + sheetFile, { waitUntil: 'load' });
+  await page.evaluate(() => document.fonts.ready);
+  await page.waitForTimeout(400);
+  await page.screenshot({ path: path.join(OUT, 'options-pink.png'), fullPage: true });
 
   await browser.close();
   fs.rmSync(path.join(ROOT, 'build/logo-tmp.html'), { force: true });
